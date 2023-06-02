@@ -1,5 +1,5 @@
 # 💫 About Me:
-⚡ Estudiante de la carrera "Full Stack Developer" en Coderhouse ⚡<br>⚡ Desarrollador Web ⚡
+⚡ Estudiante de la carrera "Full Stack Developer" en Coderhouse ⚡<br>⚡ Desarrollador Web ⚡<br>⚡ Desarrollador Web ⚡
 
 
 ## 🌐 Socials:
