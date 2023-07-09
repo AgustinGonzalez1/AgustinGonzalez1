@@ -1,4 +1,10 @@
+<div>
+  <h1>Hola, soy Agustin Gonzalez</h1>
+</div>
+
+<div aling="center">
 # 💫 About Me:
+</div>
 ⚡ Estudiante de la carrera "Full Stack Developer" en Coderhouse ⚡<br>⚡ Desarrollador Web ⚡<br>⚡ JavaScript ⚡
 
 
