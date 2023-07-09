@@ -1,4 +1,5 @@
 <h1 align="center">Hola 👋, soy Ricardo Agustin Gonzalez</h1>
+<img src="https://firebasestorage.googleapis.com/v0/b/sportify-e751a.appspot.com/o/Banner%20Para%20LinkedIn%20Desarrollador%20De%20Software%20Moderno%20Negro.png?alt=media&token=00afdc18-09a7-487f-bce9-09dc8b0cb30e">  
 <h3 align="center">Front-end developer con pasión por la creación de interfaces intuitivas y atractivas. Explorando el mundo del desarrollo backend para expandir mis habilidades y ofrecer soluciones completas. 🚀</h3>
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=agustingonzalez1&label=Profile%20views&color=0e75b6&style=flat" alt="agustingonzalez1" /> </p>
