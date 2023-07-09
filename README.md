@@ -3,9 +3,9 @@
 </div>
 
 
-<h1>
+<h3>
   💫 About Me:
-</h1>
+</h3>
 
 <p>
   ⚡ Estudiante de la carrera "Full Stack Developer" en Coderhouse ⚡
