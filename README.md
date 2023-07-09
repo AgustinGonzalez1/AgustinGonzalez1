@@ -3,9 +3,19 @@
 </div>
 
 
-# 💫 About Me:
+<h1>
+  💫 About Me:
+</h1>
 
-⚡ Estudiante de la carrera "Full Stack Developer" en Coderhouse ⚡<br>⚡ Desarrollador Web ⚡<br>⚡ JavaScript ⚡
+<p>
+  ⚡ Estudiante de la carrera "Full Stack Developer" en Coderhouse ⚡
+</p>
+<p>
+  ⚡ Desarrollador Web ⚡
+</p>
+<p>
+  ⚡ JavaScript ⚡
+</p>
 
 
 ## 🌐 Socials:
