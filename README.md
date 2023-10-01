@@ -14,7 +14,7 @@
 
 # About Me
 
-💡 I have a passion for programming and I'm excited to start my university journey in this field.
+💡 &nbsp; I have a passion for programming and I'm excited to start my university journey in this field.
 🎓 Currently, I'm pursuing a full-stack development course at Coderhouse.
 🌱 I'm always eager to dive deeper into the technologies I've learned.
 ✨ In my free time, I enjoy exploring new functions, methods, and techniques related to coding.
