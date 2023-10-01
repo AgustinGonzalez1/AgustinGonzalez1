@@ -18,7 +18,7 @@
 🎓 &nbsp;Currently, I'm pursuing a full-stack development course at Coderhouse.\
 🌱 &nbsp;I'm always eager to dive deeper into the technologies I've learned.\
 ✨ &nbsp;In my free time, I enjoy exploring new functions, methods, and techniques related to coding.\
-💬 &nbsp;I'm available to provide assistance and share knowledge in the technologies I'm experienced in.\
+💬 &nbsp;I'm available to provide assistance and share knowledge in the technologies I'm experienced in.
 
 ### ⚙️ &nbsp;GitHub Analytics
 
