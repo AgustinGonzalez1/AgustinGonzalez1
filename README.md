@@ -12,16 +12,19 @@
 
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
 
-# About Me
+### 👨🏻‍💻 &nbsp;About Me
 
-💡 &nbsp; I have a passion for programming and I'm excited to start my university journey in this field.
-🎓 Currently, I'm pursuing a full-stack development course at Coderhouse.
-🌱 I'm always eager to dive deeper into the technologies I've learned.
-✨ In my free time, I enjoy exploring new functions, methods, and techniques related to coding.
-💬 I'm available to provide assistance and share knowledge in the technologies I'm experienced in.
+💡 &nbsp;I have a passion for programming and I'm excited to start my university journey in this field.\
+🎓 &nbsp;Currently, I'm pursuing a full-stack development course at Coderhouse.\
+🌱 &nbsp;I'm always eager to dive deeper into the technologies I've learned.\
+✨ &nbsp;In my free time, I enjoy exploring new functions, methods, and techniques related to coding.\
+💬 &nbsp;I'm available to provide assistance and share knowledge in the technologies I'm experienced in.\
 
-Feel free to reach out to me for project discussions, idea sharing, or just to have an interesting conversation!
+### ⚙️ &nbsp;GitHub Analytics
 
-[LinkedIn](https://www.linkedin.com/in/your_profile)
-[GitHub](https://github.com/your_username)
-
+<p align="center">
+<a href="https://github.com/AVS1508">
+  <img height="180em" src="https://github-readme-stats-eight-theta.vercel.app/api?username=AVS1508&show_icons=true&theme=algolia&include_all_commits=true&count_private=true"/>
+  <img height="180em" src="https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=AVS1508&layout=compact&langs_count=8&theme=algolia"/>
+</a>
+</p>
