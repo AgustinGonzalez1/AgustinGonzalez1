@@ -12,7 +12,7 @@
 
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
 
-### 👨🏻‍💻 &nbsp;About Me
+#### 👨🏻‍💻 &nbsp;About Me
 
 💡 &nbsp;I have a passion for programming and I'm excited to start my university journey in this field.\
 🎓 &nbsp;Currently, I'm pursuing a full-stack development course at Coderhouse.\
@@ -20,7 +20,7 @@
 ✨ &nbsp;In my free time, I enjoy exploring new functions, methods, and techniques related to coding.\
 💬 &nbsp;I'm available to provide assistance and share knowledge in the technologies I'm experienced in.
 
-### ⚙️ &nbsp;GitHub Analytics
+#### ⚙️ &nbsp;GitHub Analytics
 
 <p align="center">
 <a href="https://github.com/AVS1508">
