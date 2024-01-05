@@ -6,6 +6,7 @@
   </ul>
 </div>
 
+
 <p align="center">
   <a href="https://github.com/AgustinGonzalez1"><img src="https://readme-typing-svg.herokuapp.com?font=Rubik&color=red&size=25&center=true&vCenter=true&width=600&height=100&lines=Web+developer;Full+Stack+MERN;MongoDB;ExpressJS;ReactJS;NodeJS;NextJS"></a>
 </p>
