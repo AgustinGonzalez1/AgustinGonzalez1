@@ -8,7 +8,7 @@
 
 
 <p align="center">
-  <a href="https://github.com/AgustinGonzalez1"><img src="https://readme-typing-svg.herokuapp.com?font=Rubik&color=yellow&size=25&center=true&vCenter=true&width=600&height=100&lines=Web+developer;Full+Stack+MERN;NextJS;Python;Django;"></a>
+  <a href="https://github.com/AgustinGonzalez1"><img src="https://readme-typing-svg.herokuapp.com?font=Rubik&color=f75c7e&size=25&center=true&vCenter=true&width=600&height=100&lines=Web+developer;Full+Stack+MERN;NextJS;Python;Django;"></a>
 </p>
 
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
