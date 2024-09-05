@@ -28,8 +28,8 @@
 
 <p align="center">
 <a href="https://github.com/AgustinGonzalez1">
-  <img height="180em" src="https://github-readme-stats-eight-theta.vercel.app/api?username=AgustinGonzalez1&show_icons=true&theme=shadow_red&include_all_commits=true&count_private=true"/>
-  <img height="180em" src="https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=AgustinGonzalez1&layout=compact&langs_count=6&theme=shadow_red"/>
+  <img height="180em" src="https://github-readme-stats-eight-theta.vercel.app/api?username=AgustinGonzalez1&show_icons=true&theme=transparent&include_all_commits=true&count_private=true"/>
+  <img height="180em" src="https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=AgustinGonzalez1&layout=compact&langs_count=6&theme=transparent"/>
 </a>
 </p>
 
