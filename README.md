@@ -21,7 +21,7 @@
 🌱 &nbsp;I am constantly learning about the technologies I know, and I like to have an understanding of the ones I'm unfamiliar with.\
 ✨ &nbsp;In my free time, I enjoy exploring new functions, methods, and techniques related to coding.\
 💬 &nbsp;I'm available to provide assistance and share knowledge in the technologies I'm experienced in.\
-💻 &nbsp;During the day, I work as a full-stack PERN developer at By Derm.\
+💻 &nbsp;During the day, I work as a Frappe developer with Vue at Novigo Technology.\
 📚 &nbsp;In the afternoons, I teach frontend programming at Play Code Latam.
 
 #### ⚙️ &nbsp;GitHub Analytics
