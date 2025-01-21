@@ -8,6 +8,8 @@
 </div>
 
 
+
+
 <p align="center">
   <a href="https://github.com/AgustinGonzalez1"><img src="https://readme-typing-svg.herokuapp.com?font=Rubik&color=c913de&size=25&center=true&vCenter=true&width=600&height=100&duration=1500&pause=1000&random=true&lines=JavaScript;TypeScript;React;MongoDB;PostgreSQL;MySQL;Astro;NextJS;Python;Django;"></a>
 </p>
