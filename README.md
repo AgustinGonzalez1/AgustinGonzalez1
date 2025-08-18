@@ -40,7 +40,7 @@
 <!--tech stack icons-->
 <p align="center">
   <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=html,css,bootstrap,tailwind,sass,git,javascript,firebase,react,figma,ts,vscode,postman,nodejs,mongodb,expressjs,nextjs,netlify,vite,python,django,astro,vue,linux,nestjs,mysql,postgres&perline=9" />
+    <img src="https://skillicons.dev/icons?i=html,css,bootstrap,tailwind,sass,git,javascript,firebase,react,figma,ts,vscode,postman,nodejs,mongodb,expressjs,nextjs,netlify,vite,python,django,astro,vue,linux,nestjs,mysql,postgres,bash,github,md,materialui,npm,pinia,pnpm&perline=9" />
   </a>
 </p>
 
