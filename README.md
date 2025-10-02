@@ -44,16 +44,6 @@
 
 ---
 
-### 🌟 Featured Projects
-
-🚧 *Add screenshots + short descriptions of your top projects here* 🚧  
-Example:  
-
-- 🔗 [**LocoPorTi**](https://locoporti.com.ar) – Personalized love pages with QR 💖  
-- 🔗 [**Play Code Latam**](https://github.com/PlayCodeLatam) – Teaching kids to code 🎓  
-
----
-
 ### ✨ Fun Stuff
 
 <p align="center">
