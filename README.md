@@ -26,19 +26,17 @@
 ### ⚡ Estadísticas de GitHub
 
 <p align="center">
-  <!-- Stats generales -->
-  <img height="160em" src="https://github-readme-stats.vercel.app/api?username=AgustinGonzalez1&show_icons=true&theme=radical&count_private=true&title_color=c913de&include_all_commits=true&hide_border=false"/>
+  <!-- Tarjeta de estadísticas generales -->
+  <img height="160em" src="https://github-readme-stats.vercel.app/api?username=AgustinGonzalez1&show_icons=true&theme=radical&count_private=true&title_color=c913de&include_all_commits=true"/>
   
-  <!-- Lenguajes por repos -->
-  <img height="160em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=AgustinGonzalez1&layout=compact&langs_count=8&theme=radical&title_color=c913de&hide_border=false"/>
+  <img height="180em" src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=AgustinGonzalez1&theme=radical"/>
+  <!-- Tarjeta de lenguajes por repos -->
 </p>
 
 <p align="center">
-  <!-- Current Streak -->
-  <img height="160em" src="https://github-readme-streak-stats.herokuapp.com/?user=AgustinGonzalez1&theme=radical&ring=c913de&fire=c913de&currStreakLabel=c913de&hide_border=false"/>
-  
-  <!-- Lenguajes por commits -->
-  <img height="160em" src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=AgustinGonzalez1&theme=radical&hide_border=false"/>
+  <!-- Tarjeta de streak -->
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=AgustinGonzalez1&theme=radical&ring=c913de&fire=c913de&currStreakLabel=c913de"/>
+  <img height="160em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=AgustinGonzalez1&layout=compact&langs_count=8&theme=radical&title_color=c913de"/>
 </p>
 
 ---
