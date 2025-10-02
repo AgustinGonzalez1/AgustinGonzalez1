@@ -26,12 +26,19 @@
 ### ⚡ GitHub Analytics
 
 <p align="center">
-  <img height="160em" src="https://github-readme-stats.vercel.app/api?username=AgustinGonzalez1&show_icons=true&theme=radical&count_private=true&title_color=c913de&include_all_commits=true"/>
-  <img height="160em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=AgustinGonzalez1&layout=compact&langs_count=8&theme=radical&title_color=c913de"/>
+  <!-- Tarjeta de métricas unificadas -->
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=AgustinGonzalez1&theme=radical"/>
 </p>
 
 <p align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=AgustinGonzalez1&theme=radical&ring=c913de&fire=c913de&currStreakLabel=c913de"/>
+  <!-- Stats compactas adicionales -->
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=AgustinGonzalez1&theme=radical"/>
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=AgustinGonzalez1&theme=radical"/>
+</p>
+
+<p align="center">
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=AgustinGonzalez1&theme=radical"/>
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=AgustinGonzalez1&theme=radical&utcOffset=3"/>
 </p>
 
 ---
@@ -41,16 +48,6 @@
 <p align="center">
   <img src="https://skillicons.dev/icons?i=html,css,bootstrap,tailwind,sass,git,javascript,ts,react,nextjs,nodejs,express,vue,nestjs,astro,python,django,mysql,postgres,mongodb,firebase,linux,vercel,netlify,vite,figma,vscode,postman&perline=9" />
 </p>
-
----
-
-### 🌟 Featured Projects
-
-🚧 *Add screenshots + short descriptions of your top projects here* 🚧  
-Example:  
-
-- 🔗 [**LocoPorTi**](https://locoporti.com.ar) – Personalized love pages with QR 💖  
-- 🔗 [**Play Code Latam**](https://github.com/PlayCodeLatam) – Teaching kids to code 🎓  
 
 ---
 
