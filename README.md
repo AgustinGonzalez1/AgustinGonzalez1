@@ -26,8 +26,8 @@
 ### ⚡ Estadísticas de GitHub
 
 <p align="center">
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=AgustinGonzalez1&theme=radical" height="180em"/>
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=AgustinGonzalez1&theme=radical" height="180em"/>
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=AgustinGonzalez1&theme=radical"/>
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=AgustinGonzalez1&theme=radical&utcOffset=3"/>
 </p>
 
 
