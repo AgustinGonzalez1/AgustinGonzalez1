@@ -26,17 +26,15 @@
 ### ⚡ Estadísticas de GitHub
 
 <p align="center">
-  <!-- Tarjeta de estadísticas generales -->
-  <img height="160em" src="https://github-readme-stats.vercel.app/api?username=AgustinGonzalez1&show_icons=true&theme=radical&count_private=true&title_color=c913de&include_all_commits=true"/>
+  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=AgustinGonzalez1&show_icons=true&theme=radical&count_private=true&title_color=c913de&include_all_commits=true"/>
   
   <img height="180em" src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=AgustinGonzalez1&theme=radical"/>
-  <!-- Tarjeta de lenguajes por repos -->
 </p>
 
 <p align="center">
   <!-- Tarjeta de streak -->
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=AgustinGonzalez1&theme=radical&ring=c913de&fire=c913de&currStreakLabel=c913de"/>
-  <img height="160em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=AgustinGonzalez1&layout=compact&langs_count=8&theme=radical&title_color=c913de"/>
+  <img height="180em" src="https://github-readme-streak-stats.herokuapp.com/?user=AgustinGonzalez1&theme=radical&ring=c913de&fire=c913de&currStreakLabel=c913de"/>
+  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=AgustinGonzalez1&layout=compact&langs_count=8&theme=radical&title_color=c913de"/>
 </p>
 
 ---
