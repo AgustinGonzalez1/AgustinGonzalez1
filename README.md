@@ -47,23 +47,15 @@
 
 ---
 
-### ✨ Extras
-
-<p align="center">
-  <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical&quote=El+código+es+como+el+humor.+Cuando+tenés+que+explicarlo,+es+malo."/>
-</p>
-
-<p align="center">
-  <img src="https://komarev.com/ghpvc/?username=AgustinGonzalez1&label=Visitas+al+perfil&color=c913de&style=flat"/>
-</p>
-
----
-
 ### 🤝 Conectemos
 
 <p align="center">
 <a href="https://www.linkedin.com/in/ricardoagustingonzalez/" target="_blank"><img src="https://img.icons8.com/color/48/000000/linkedin.png"/></a>
 <a href="https://www.instagram.com/agustin.tsx/" target="_blank"><img src="https://img.icons8.com/color/48/000000/instagram-new.png"/></a>
+</p>
+
+<p align="center">
+  <img src="https://komarev.com/ghpvc/?username=AgustinGonzalez1&label=Visitas+al+perfil&color=c913de&style=flat"/>
 </p>
 
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
