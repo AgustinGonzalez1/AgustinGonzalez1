@@ -26,10 +26,10 @@
 ### ⚡ Estadísticas de GitHub
 
 <p align="center">
-  <!-- Tarjeta de estadísticas (toda la existencia) -->
+  <!-- Tarjeta de estadísticas -->
   <img height="180em" src="https://github-readme-stats-eight-theta.vercel.app/api?username=AgustinGonzalez1&show_icons=true&theme=radical&include_all_commits=true&count_private=true&title_color=c913de&hide_border=false"/>
 
-  <!-- Tarjeta de lenguajes (lado a lado) -->
+  <!-- Tarjeta de lenguajes -->
   <img height="180em" src="https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=AgustinGonzalez1&layout=compact&langs_count=8&theme=radical&title_color=c913de&hide_border=false"/>
 </p>
 
