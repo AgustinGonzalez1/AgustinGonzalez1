@@ -16,7 +16,7 @@
 
 💡 Apasionado por la **programación** y por explorar nuevas tecnologías.  
 🎓 Actualmente cursando una **Tecnicatura Superior en Programación** en **TECLAB**.  
-💻 Desarrollador **Frappe + Vue** en **Novigo Technology**.  
+💻 Desarrollador **Python + Vue** en **Novigo Technology**.  
 📚 Profesor de **Frontend** en **Play Code Latam**.  
 ✨ Me encanta experimentar con nuevas herramientas, métodos y frameworks.  
 📩 Siempre dispuesto a **colaborar y compartir conocimiento**.  
