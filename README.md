@@ -40,7 +40,7 @@
 ### 🛠️ Tecnologías
 
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=html,css,bootstrap,tailwind,sass,git,javascript,ts,react,nextjs,nodejs,express,vue,nestjs,astro,python,django,mysql,postgres,mongodb,firebase,linux,vercel,netlify,vite,figma,vscode,postman&perline=9" />
+<a href="https://skillicons.dev"> <img src="https://skillicons.dev/icons?i=html,css,bootstrap,tailwind,sass,git,javascript,firebase,react,figma,ts,vscode,postman,nodejs,mongodb,expressjs,nextjs,netlify,vite,python,django,astro,vue,linux,nestjs,mysql,postgres,bash,github,md,materialui,npm,pinia,pnpm,vercel&perline=7" />
 </p>
 
 ---
