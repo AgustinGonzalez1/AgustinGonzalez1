@@ -12,8 +12,6 @@
 
 ---
 
-
-
 ### 👨🏻‍💻 Sobre mí
 
 💡 Apasionado por la **programación** y por explorar nuevas tecnologías.  
