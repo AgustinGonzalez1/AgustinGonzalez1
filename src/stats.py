@@ -122,7 +122,7 @@ query ($login: String!, $after: String) {
         isFork
         stargazerCount
         pushedAt
-        languages(first: 10, orderBy: { field: SIZE, order: DESC }) {
+        languages(first: 10, orderBy: { field: SIZE, direction: DESC }) {
           edges {
             size
             node { name color }
