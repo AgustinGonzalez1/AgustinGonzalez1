@@ -51,7 +51,7 @@ def _uptime_string(created_at_iso):
     if years:
         parts.append(f"{years} year{'s' if years != 1 else ''}")
     parts.append(f"{months} month{'s' if months != 1 else ''}")
-    return ", ".join(parts) + " programming"
+    return ", ".join(parts)
 
 
 def gather_stats(api):

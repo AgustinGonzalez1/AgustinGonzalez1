@@ -7,26 +7,15 @@
   "hobby_real": "Making YouTube videos",
   "hobby_software": "Web Scraping",
   "ide": "VSCode",
-  "languages_computer": [
-    "React",
-    "Next.js",
-    "Vue.js",
-    "Node.js"
-  ],
-  "languages_programming": [
-    "JavaScript",
-    "TypeScript",
-    "Python"
-  ],
-  "languages_real": [
-    "Spanish"
-  ],
+  "languages_computer": ["React", "Next.js", "Vue.js", "Node.js"],
+  "languages_programming": ["JavaScript", "TypeScript", "Python"],
+  "languages_real": ["Spanish"],
   "loc_added": 406592,
   "loc_deleted": 86888,
   "os_list": "Linux, Windows",
   "repos_contributed": 23,
   "repos_owned": 69,
   "stars": 3,
-  "uptime": "3 years, 7 months programming",
+  "uptime": "3 years, 7 months",
   "username": "AgustinGonzalez1"
 }
