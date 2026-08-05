@@ -33,12 +33,13 @@ class GitHubAPI:
             }
         )
 
-    def _request_with_backoff(self, method, url, **kwargs):
+    def _request_with_backoff(self, method, url, max_retries=None, **kwargs):
+        max_retries = max_retries or self.max_retries
         delay = 2.0
         last_resp = None
         last_exc = None
 
-        for attempt in range(1, self.max_retries + 1):
+        for attempt in range(1, max_retries + 1):
             try:
                 resp = self.session.request(method, url, timeout=self.timeout, **kwargs)
             except requests.RequestException as exc:
@@ -62,17 +63,19 @@ class GitHubAPI:
                     retry_after = resp.headers.get("Retry-After")
                     wait = int(retry_after) if retry_after else delay
                     print(
-                        f"[github_api] Got {resp.status_code} (attempt {attempt}/{self.max_retries}), "
+                        f"[github_api] Got {resp.status_code} (attempt {attempt}/{max_retries}), "
                         f"backing off {wait:.0f}s ..."
                     )
                     time.sleep(wait + random.uniform(0, 1))
                     delay = min(delay * 2, 60)
                 continue
 
-            # GitHub returns 202 while it computes stats (e.g. contributor stats endpoint)
+            # GitHub returns 202 while it computes stats (e.g. contributor stats
+            # endpoint) -- for a repo it hasn't cached before this can take a
+            # while, so give it a generous, slowly growing wait.
             if resp.status_code == 202:
-                wait = min(2 + attempt * 2, 20)
-                print(f"[github_api] Stats still computing (202), retrying in {wait}s ...")
+                wait = min(3 + attempt * 3, 30)
+                print(f"[github_api] Stats still computing (202), attempt {attempt}/{max_retries}, retrying in {wait}s ...")
                 time.sleep(wait)
                 continue
 
@@ -84,13 +87,13 @@ class GitHubAPI:
             return resp
 
         if last_exc:
-            raise GitHubAPIError(f"Request to {url} failed after {self.max_retries} attempts: {last_exc}")
+            raise GitHubAPIError(f"Request to {url} failed after {max_retries} attempts: {last_exc}")
         status = last_resp.status_code if last_resp is not None else "?"
-        raise GitHubAPIError(f"Request to {url} failed after {self.max_retries} attempts (last status {status})")
+        raise GitHubAPIError(f"Request to {url} failed after {max_retries} attempts (last status {status})")
 
-    def rest_get(self, path, params=None):
+    def rest_get(self, path, params=None, max_retries=None):
         url = path if path.startswith("http") else f"{GITHUB_API_REST}{path}"
-        resp = self._request_with_backoff("GET", url, params=params)
+        resp = self._request_with_backoff("GET", url, params=params, max_retries=max_retries)
         if resp.status_code == 204:
             return None
         if resp.status_code == 404:

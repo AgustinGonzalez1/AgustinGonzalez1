@@ -1,6 +1,10 @@
 """Collects all the raw numbers shown in the neofetch-style stats card."""
 import datetime as dt
 
+from .github_api import GitHubAPIError
+
+LOC_STATS_MAX_RETRIES = 12
+
 USER_INFO_QUERY = """
 query {
   viewer {
@@ -120,7 +124,13 @@ def collect_loc(api, login, repos, loc_cache):
             continue
 
         owner, name = full_name.split("/", 1)
-        contributors = api.rest_get(f"/repos/{owner}/{name}/stats/contributors") or []
+        try:
+            contributors = api.rest_get(
+                f"/repos/{owner}/{name}/stats/contributors", max_retries=LOC_STATS_MAX_RETRIES
+            ) or []
+        except GitHubAPIError as exc:
+            print(f"[stats] WARNING: contributor stats not ready for {full_name} ({exc}); skipping for now.")
+            continue
 
         additions = deletions = 0
         for contributor in contributors:

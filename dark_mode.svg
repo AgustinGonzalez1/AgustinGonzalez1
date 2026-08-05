@@ -50,8 +50,8 @@
   <text x="638" y="258" text-anchor="end" class="line fadein" style="animation-delay:0.54s" fill="#f8f8f2">linkedin.com/in/ricardoagustingonzalez</text>
   <text x="218" y="275" class="line fadein" style="animation-delay:0.585s"><tspan fill="#8be9fd">Discord</tspan><tspan fill="#6272a4"> ...................................... </tspan></text>
   <text x="638" y="275" text-anchor="end" class="line fadein" style="animation-delay:0.585s" fill="#f8f8f2">agustin.dev</text>
-  <text x="218" y="292" class="line fadein" style="animation-delay:0.63s"><tspan fill="#8be9fd">Portfolio</tspan><tspan fill="#6272a4"> ........................... </tspan></text>
-  <text x="638" y="292" text-anchor="end" class="line fadein" style="animation-delay:0.63s" fill="#f8f8f2">www.vulcanis.com.ar/</text>
+  <text x="218" y="292" class="line fadein" style="animation-delay:0.63s"><tspan fill="#8be9fd">Portfolio</tspan><tspan fill="#6272a4"> ............................ </tspan></text>
+  <text x="638" y="292" text-anchor="end" class="line fadein" style="animation-delay:0.63s" fill="#f8f8f2">www.vulcanis.com.ar</text>
   <text x="218" y="317" class="section fadein" fill="#ff79c6" style="animation-delay:0.675s">GitHub Stats</text>
   <line x1="314.4" y1="313.5" x2="638" y2="313.5" class="hr" />
   <text x="218" y="334" class="line fadein" style="animation-delay:0.72s"><tspan fill="#8be9fd">Repos</tspan><tspan fill="#6272a4"> ........... </tspan></text>
