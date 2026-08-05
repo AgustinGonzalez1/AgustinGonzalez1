@@ -1,0 +1,65 @@
+{
+  "commits": 3569,
+  "contact_discord": "agustin.dev",
+  "contact_email": "agus.devvv@gmail.com",
+  "contact_linkedin": "linkedin.com/in/ricardoagustingonzalez",
+  "contact_portfolio": "www.vulcanis.com.ar",
+  "followers": 9,
+  "hobby_real": "Making YouTube videos",
+  "hobby_software": "Web Scraping",
+  "ide": "VSCode",
+  "languages_computer": [
+    "React",
+    "Next.js",
+    "Vue.js",
+    "Node.js"
+  ],
+  "languages_programming": [
+    "JavaScript",
+    "TypeScript",
+    "Python"
+  ],
+  "languages_real": [
+    "Spanish"
+  ],
+  "loc_added": 753019,
+  "loc_deleted": 337627,
+  "most_popular": [
+    {
+      "color": "#f1e05a",
+      "name": "JavaScript",
+      "percent": 44.3
+    },
+    {
+      "color": "#61dafb",
+      "name": "React",
+      "percent": 35.8
+    },
+    {
+      "color": "#3178c6",
+      "name": "TypeScript",
+      "percent": 22.2
+    },
+    {
+      "color": "#41b883",
+      "name": "Vue",
+      "percent": 17.4
+    },
+    {
+      "color": "#8b8b8b",
+      "name": "Express",
+      "percent": 15.7
+    },
+    {
+      "color": "#ffffff",
+      "name": "Next.js",
+      "percent": 11.9
+    }
+  ],
+  "os_list": "Linux, Windows",
+  "repos_contributed": 23,
+  "repos_owned": 69,
+  "stars": 3,
+  "uptime": "3 years, 7 months",
+  "username": "AgustinGonzalez1"
+}
