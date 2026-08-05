@@ -7,26 +7,30 @@ from .github_api import GitHubAPIError
 
 LOC_STATS_MAX_RETRIES = 12
 
-# npm package name (as it appears as a dependency key) -> (display name, brand color)
+# npm/pip package name (as it appears as a dependency key) ->
+# (display name, brand color, GitHub language names it's written in).
+# The language list is what lets a framework's weight be scaled by the
+# same bytes-in-repo logic as a plain language, instead of counting a
+# whole repo's LOC (backend and all) toward a frontend framework.
 FRAMEWORK_MAP = {
-    "react": ("React", "#61dafb"),
-    "next": ("Next.js", "#ffffff"),
-    "vue": ("Vue.js", "#41b883"),
-    "nuxt": ("Nuxt", "#00dc82"),
-    "nuxt3": ("Nuxt", "#00dc82"),
-    "@angular/core": ("Angular", "#dd0031"),
-    "svelte": ("Svelte", "#ff3e00"),
-    "express": ("Express", "#8b8b8b"),
-    "fastify": ("Fastify", "#8b8b8b"),
-    "@nestjs/core": ("NestJS", "#e0234e"),
-    "gatsby": ("Gatsby", "#663399"),
-    "@remix-run/react": ("Remix", "#8b8b8b"),
-    "astro": ("Astro", "#ff5d01"),
-    "svelte-kit": ("SvelteKit", "#ff3e00"),
-    "@sveltejs/kit": ("SvelteKit", "#ff3e00"),
-    "django": ("Django", "#092e20"),
-    "flask": ("Flask", "#8b8b8b"),
-    "fastapi": ("FastAPI", "#009688"),
+    "react": ("React", "#61dafb", ["JavaScript", "TypeScript"]),
+    "next": ("Next.js", "#ffffff", ["JavaScript", "TypeScript"]),
+    "vue": ("Vue.js", "#41b883", ["Vue", "JavaScript", "TypeScript"]),
+    "nuxt": ("Nuxt", "#00dc82", ["Vue", "JavaScript", "TypeScript"]),
+    "nuxt3": ("Nuxt", "#00dc82", ["Vue", "JavaScript", "TypeScript"]),
+    "@angular/core": ("Angular", "#dd0031", ["TypeScript", "JavaScript"]),
+    "svelte": ("Svelte", "#ff3e00", ["Svelte", "JavaScript", "TypeScript"]),
+    "express": ("Express", "#8b8b8b", ["JavaScript", "TypeScript"]),
+    "fastify": ("Fastify", "#8b8b8b", ["JavaScript", "TypeScript"]),
+    "@nestjs/core": ("NestJS", "#e0234e", ["TypeScript", "JavaScript"]),
+    "gatsby": ("Gatsby", "#663399", ["JavaScript", "TypeScript"]),
+    "@remix-run/react": ("Remix", "#8b8b8b", ["JavaScript", "TypeScript"]),
+    "astro": ("Astro", "#ff5d01", ["Astro", "JavaScript", "TypeScript"]),
+    "svelte-kit": ("SvelteKit", "#ff3e00", ["Svelte", "JavaScript", "TypeScript"]),
+    "@sveltejs/kit": ("SvelteKit", "#ff3e00", ["Svelte", "JavaScript", "TypeScript"]),
+    "django": ("Django", "#092e20", ["Python"]),
+    "flask": ("Flask", "#8b8b8b", ["Python"]),
+    "fastapi": ("FastAPI", "#009688", ["Python"]),
 }
 
 
@@ -215,18 +219,20 @@ def collect_total_commits(api, created_at_iso):
 
 
 def collect_weighted_most_popular(repos, loc_cache, framework_cache, top_n=6):
-    """Ranks languages and frameworks by the user's *actual* LOC contribution
-    per repo (from loc_cache), not by raw repo byte totals or a flat
-    per-repo dependency count -- so a repo you barely touched doesn't count
-    as much as one you've put thousands of lines into. A repo's LOC is
-    split across its languages proportionally to that repo's own byte
-    breakdown, since GitHub doesn't expose LOC-per-language directly.
+    """Ranks languages and frameworks on the *same* scale: each repo's user
+    LOC is split across languages by that repo's own byte breakdown (GitHub
+    doesn't expose LOC-per-language directly), and a framework's weight
+    uses that same byte-share logic restricted to the languages it's
+    actually written in (see FRAMEWORK_MAP) -- so e.g. a Django backend's
+    LOC doesn't inflate a frontend framework's number just because they
+    happen to share a repo. Both pools divide by the *same* total LOC, so
+    their percentages are directly comparable instead of measuring
+    different things on different scales.
     """
     lang_weight = {}
     lang_colors = {}
     fw_weight = {}
     total_weight = 0.0
-    fw_total_weight = 0.0
 
     for repo in repos:
         full_name = repo["nameWithOwner"]
@@ -238,7 +244,9 @@ def collect_weighted_most_popular(repos, loc_cache, framework_cache, top_n=6):
             continue
 
         edges = repo["languages"]["edges"]
-        repo_total_bytes = sum(e["size"] for e in edges) or 1
+        bytes_by_lang = {e["node"]["name"]: e["size"] for e in edges}
+        repo_total_bytes = sum(bytes_by_lang.values()) or 1
+
         for edge in edges:
             name = edge["node"]["name"]
             share = edge["size"] / repo_total_bytes
@@ -249,29 +257,30 @@ def collect_weighted_most_popular(repos, loc_cache, framework_cache, top_n=6):
         fw_entry = framework_cache.get(full_name)
         found = fw_entry.get("frameworks") if fw_entry else None
         if found:
-            fw_total_weight += user_loc
             for pkg in found:
-                fw_weight[pkg] = fw_weight.get(pkg, 0) + user_loc
+                home_languages = FRAMEWORK_MAP[pkg][2]
+                home_bytes = sum(bytes_by_lang.get(lang, 0) for lang in home_languages)
+                share = home_bytes / repo_total_bytes
+                fw_weight[pkg] = fw_weight.get(pkg, 0) + user_loc * share
 
-    languages = []
-    if total_weight:
-        ranked = sorted(lang_weight.items(), key=lambda kv: kv[1], reverse=True)[:top_n]
-        languages = [
-            {"name": name, "percent": round(w / total_weight * 100, 1), "color": lang_colors[name]}
-            for name, w in ranked
-        ]
+    if not total_weight:
+        return [], []
 
-    frameworks = []
-    if fw_total_weight:
-        ranked = sorted(fw_weight.items(), key=lambda kv: kv[1], reverse=True)[:top_n]
-        frameworks = [
-            {
-                "name": FRAMEWORK_MAP[pkg][0],
-                "percent": round(w / fw_total_weight * 100, 1),
-                "color": FRAMEWORK_MAP[pkg][1],
-            }
-            for pkg, w in ranked
-        ]
+    ranked = sorted(lang_weight.items(), key=lambda kv: kv[1], reverse=True)[:top_n]
+    languages = [
+        {"name": name, "percent": round(w / total_weight * 100, 1), "color": lang_colors[name]}
+        for name, w in ranked
+    ]
+
+    ranked = sorted(fw_weight.items(), key=lambda kv: kv[1], reverse=True)[:top_n]
+    frameworks = [
+        {
+            "name": FRAMEWORK_MAP[pkg][0],
+            "percent": round(w / total_weight * 100, 1),
+            "color": FRAMEWORK_MAP[pkg][1],
+        }
+        for pkg, w in ranked
+    ]
 
     return languages, frameworks
 

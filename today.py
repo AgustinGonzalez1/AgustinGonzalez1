@@ -59,12 +59,33 @@ def _uptime_string(created_at_iso):
     return ", ".join(parts)
 
 
+def _canonical_tech_name(name):
+    """'Vue' (language, from .vue files) and 'Vue.js' (framework, from the
+    npm dependency) refer to the same thing -- normalize so they collide
+    and don't both show up in the list."""
+    return name.lower().replace(".js", "").replace(" ", "")
+
+
 def _combine_most_popular(languages, frameworks, top_n):
-    """Both languages and frameworks are already weighted by the user's LOC
-    contribution (see collect_weighted_most_popular), just normalized
-    against slightly different denominators (all repos vs. only repos with
-    a package.json) -- close enough to blend into one ranking."""
-    combined = sorted(languages + frameworks, key=lambda item: item["percent"], reverse=True)
+    """Languages and frameworks are both weighted by the user's LOC and
+    divided by the same total (see collect_weighted_most_popular), so their
+    percentages are on the same scale. They still can't just be summed
+    though: when a language and a framework name the same underlying tech
+    (e.g. "Vue" the language vs "Vue.js" the framework dependency), they're
+    two overlapping estimates of the same code, not two different things to
+    add up. The language entry wins those collisions -- it's the more
+    precise, directly-measured one (actual file bytes, not "this repo
+    depends on X"). The framework entry is only kept when there's no
+    language counterpart (e.g. React/Next.js have no dedicated GitHub
+    language, they're just JavaScript/TypeScript bytes).
+    """
+    by_key = {}
+    for item in languages:
+        by_key[_canonical_tech_name(item["name"])] = item
+    for item in frameworks:
+        by_key.setdefault(_canonical_tech_name(item["name"]), item)
+
+    combined = sorted(by_key.values(), key=lambda item: item["percent"], reverse=True)
     return combined[:top_n]
 
 
