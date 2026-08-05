@@ -1,0 +1,53 @@
+name: Update profile stats
+
+on:
+  schedule:
+    # every 12 hours
+    - cron: "0 */12 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-profile-stats
+  cancel-in-progress: false
+
+jobs:
+  update-stats:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          # bot commits below must not re-trigger this workflow's push trigger
+          # (there is none configured), but keep full history in case it's
+          # needed for debugging.
+          fetch-depth: 1
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Generate stats SVGs
+        env:
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+        run: python today.py
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          if git diff --quiet -- dark_mode.svg light_mode.svg cache/; then
+            echo "No changes to stats, nothing to commit."
+            exit 0
+          fi
+
+          git add dark_mode.svg light_mode.svg cache/
+          git commit -m "chore: update profile stats [skip ci]"
+          git push

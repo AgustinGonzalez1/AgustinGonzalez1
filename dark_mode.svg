@@ -1,0 +1,66 @@
+<svg width="662" height="388" viewBox="0 0 662 388" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="neofetch-style GitHub stats for AgustinGonzalez1">
+  
+    <style>
+      text { font-family: 'Cascadia Code','Fira Code',Consolas,'Liberation Mono',Menlo,monospace; font-size: 12px; }
+      .prompt { font-size: 14px; }
+      .section { font-weight: bold; font-size: 12px; }
+      .line { font-size: 12px; }
+      .divider { stroke: #6272a4; stroke-width: 1; }
+      .hr { stroke: #6272a4; stroke-width: 1; stroke-dasharray: 2,2; }
+      .fadein {
+        opacity: 0;
+        animation: fadeIn 0.5s ease-out forwards;
+      }
+      @keyframes fadeIn {
+        from { opacity: 0; transform: translateX(-4px); }
+        to   { opacity: 1; transform: translateX(0); }
+      }
+    </style>
+    
+  <rect x="0" y="0" width="662" height="388" rx="10" fill="#282a36" stroke="#6272a4" />
+  <g transform="translate(35.9,128.1)" fill="#5d4a80" style="font-family:'Cascadia Code','Fira Code',Consolas,'Liberation Mono',Menlo,monospace;font-size:12px;"><text x="0" y="13.8" xml:space="preserve">███               ███</text><text x="0" y="27.6" xml:space="preserve"> ███             ███ </text><text x="0" y="41.4" xml:space="preserve">  ███           ███  </text><text x="0" y="55.2" xml:space="preserve">   ███         ███   </text><text x="0" y="69.0" xml:space="preserve">    ███       ███    </text><text x="0" y="82.8" xml:space="preserve">     ███     ███     </text><text x="0" y="96.6" xml:space="preserve">      ███   ███      </text><text x="0" y="110.4" xml:space="preserve">       ███ ███       </text><text x="0" y="124.2" xml:space="preserve">        █████        </text><text x="0" y="138.0" xml:space="preserve">         ███         </text><text x="0" y="151.8" xml:space="preserve">        █████        </text></g>
+  <g transform="translate(28.9,121.1)" fill-opacity="0.55" fill="#e2d4fc" style="font-family:'Cascadia Code','Fira Code',Consolas,'Liberation Mono',Menlo,monospace;font-size:12px;"><text x="0" y="13.8" xml:space="preserve">███               ███</text><text x="0" y="27.6" xml:space="preserve"> ███             ███ </text><text x="0" y="41.4" xml:space="preserve">  ███           ███  </text><text x="0" y="55.2" xml:space="preserve">   ███         ███   </text><text x="0" y="69.0" xml:space="preserve">    ███       ███    </text><text x="0" y="82.8" xml:space="preserve">     ███     ███     </text><text x="0" y="96.6" xml:space="preserve">      ███   ███      </text><text x="0" y="110.4" xml:space="preserve">       ███ ███       </text><text x="0" y="124.2" xml:space="preserve">        █████        </text><text x="0" y="138.0" xml:space="preserve">         ███         </text><text x="0" y="151.8" xml:space="preserve">        █████        </text></g>
+  <g transform="translate(30.9,123.1)" fill="#bd93f9" style="font-family:'Cascadia Code','Fira Code',Consolas,'Liberation Mono',Menlo,monospace;font-size:12px;"><text x="0" y="13.8" xml:space="preserve">███               ███</text><text x="0" y="27.6" xml:space="preserve"> ███             ███ </text><text x="0" y="41.4" xml:space="preserve">  ███           ███  </text><text x="0" y="55.2" xml:space="preserve">   ███         ███   </text><text x="0" y="69.0" xml:space="preserve">    ███       ███    </text><text x="0" y="82.8" xml:space="preserve">     ███     ███     </text><text x="0" y="96.6" xml:space="preserve">      ███   ███      </text><text x="0" y="110.4" xml:space="preserve">       ███ ███       </text><text x="0" y="124.2" xml:space="preserve">        █████        </text><text x="0" y="138.0" xml:space="preserve">         ███         </text><text x="0" y="151.8" xml:space="preserve">        █████        </text></g>
+  <line x1="206.0" y1="24" x2="206.0" y2="362" class="divider" />
+  <text x="218" y="30" class="prompt fadein" style="animation-delay:0.0s"><tspan fill="#50fa7b" font-weight="bold">AgustinGonzalez1</tspan><tspan fill="#f8f8f2">@</tspan><tspan fill="#50fa7b" font-weight="bold">github</tspan></text>
+  <line x1="421.2" y1="26" x2="638" y2="26" class="hr" />
+  <text x="218" y="47" class="line fadein" style="animation-delay:0.045s"><tspan fill="#8be9fd">OS</tspan><tspan fill="#6272a4"> ........................................ </tspan></text>
+  <text x="638" y="47" text-anchor="end" class="line fadein" style="animation-delay:0.045s" fill="#f8f8f2">Linux, Windows</text>
+  <text x="218" y="64" class="line fadein" style="animation-delay:0.09s"><tspan fill="#8be9fd">Uptime</tspan><tspan fill="#6272a4"> ..................... </tspan></text>
+  <text x="638" y="64" text-anchor="end" class="line fadein" style="animation-delay:0.09s" fill="#f8f8f2">4 years, 3 months programming</text>
+  <text x="218" y="81" class="line fadein" style="animation-delay:0.135s"><tspan fill="#8be9fd">IDE</tspan><tspan fill="#6272a4"> ............................................... </tspan></text>
+  <text x="638" y="81" text-anchor="end" class="line fadein" style="animation-delay:0.135s" fill="#f8f8f2">VSCode</text>
+  <text x="218" y="106" class="line fadein" style="animation-delay:0.18s"><tspan fill="#8be9fd">Languages.Programming</tspan><tspan fill="#6272a4"> ..... </tspan></text>
+  <text x="638" y="106" text-anchor="end" class="line fadein" style="animation-delay:0.18s" fill="#f8f8f2">JavaScript, TypeScript, Python</text>
+  <text x="218" y="123" class="line fadein" style="animation-delay:0.225s"><tspan fill="#8be9fd">Languages.Computer</tspan><tspan fill="#6272a4"> ....... </tspan></text>
+  <text x="638" y="123" text-anchor="end" class="line fadein" style="animation-delay:0.225s" fill="#f8f8f2">React, Next.js, Vue.js, Node.js</text>
+  <text x="218" y="140" class="line fadein" style="animation-delay:0.27s"><tspan fill="#8be9fd">Languages.Real</tspan><tspan fill="#6272a4"> ................................... </tspan></text>
+  <text x="638" y="140" text-anchor="end" class="line fadein" style="animation-delay:0.27s" fill="#f8f8f2">Spanish</text>
+  <text x="218" y="165" class="section fadein" fill="#ff79c6" style="animation-delay:0.315s">Hobbies</text>
+  <line x1="278.4" y1="161.5" x2="638" y2="161.5" class="hr" />
+  <text x="218" y="182" class="line fadein" style="animation-delay:0.36s"><tspan fill="#8be9fd">Hobbies.Software</tspan><tspan fill="#6272a4"> ............................ </tspan></text>
+  <text x="638" y="182" text-anchor="end" class="line fadein" style="animation-delay:0.36s" fill="#f8f8f2">Web Scraping</text>
+  <text x="218" y="199" class="line fadein" style="animation-delay:0.405s"><tspan fill="#8be9fd">Hobbies.Real</tspan><tspan fill="#6272a4"> ....................... </tspan></text>
+  <text x="638" y="199" text-anchor="end" class="line fadein" style="animation-delay:0.405s" fill="#f8f8f2">Making YouTube videos</text>
+  <text x="218" y="224" class="section fadein" fill="#ff79c6" style="animation-delay:0.45s">Contact</text>
+  <line x1="278.4" y1="220.5" x2="638" y2="220.5" class="hr" />
+  <text x="218" y="241" class="line fadein" style="animation-delay:0.495s"><tspan fill="#8be9fd">Email</tspan><tspan fill="#6272a4"> ............................... </tspan></text>
+  <text x="638" y="241" text-anchor="end" class="line fadein" style="animation-delay:0.495s" fill="#f8f8f2">agus.devvv@gmail.com</text>
+  <text x="218" y="258" class="line fadein" style="animation-delay:0.54s"><tspan fill="#8be9fd">LinkedIn</tspan><tspan fill="#6272a4"> .......... </tspan></text>
+  <text x="638" y="258" text-anchor="end" class="line fadein" style="animation-delay:0.54s" fill="#f8f8f2">linkedin.com/in/ricardoagustingonzalez</text>
+  <text x="218" y="275" class="line fadein" style="animation-delay:0.585s"><tspan fill="#8be9fd">Discord</tspan><tspan fill="#6272a4"> ...................................... </tspan></text>
+  <text x="638" y="275" text-anchor="end" class="line fadein" style="animation-delay:0.585s" fill="#f8f8f2">agustin.dev</text>
+  <text x="218" y="300" class="section fadein" fill="#ff79c6" style="animation-delay:0.63s">GitHub Stats</text>
+  <line x1="314.4" y1="296.5" x2="638" y2="296.5" class="hr" />
+  <text x="218" y="317" class="line fadein" style="animation-delay:0.675s"><tspan fill="#8be9fd">Repos</tspan><tspan fill="#6272a4"> ........... </tspan></text>
+  <text x="463.52" y="317" text-anchor="end" class="line fadein" style="animation-delay:0.675s" fill="#f8f8f2">42 {Contrib: 17}</text>
+  <text x="487.52" y="317" class="line fadein" style="animation-delay:0.675s"><tspan fill="#8be9fd">Stars</tspan><tspan fill="#6272a4"> ........... </tspan></text>
+  <text x="638" y="317" text-anchor="end" class="line fadein" style="animation-delay:0.675s" fill="#f8f8f2">128</text>
+  <text x="218" y="334" class="line fadein" style="animation-delay:0.72s"><tspan fill="#8be9fd">Commits</tspan><tspan fill="#6272a4"> .................... </tspan></text>
+  <text x="463.52" y="334" text-anchor="end" class="line fadein" style="animation-delay:0.72s" fill="#f8f8f2">3,541</text>
+  <text x="487.52" y="334" class="line fadein" style="animation-delay:0.72s"><tspan fill="#8be9fd">Followers</tspan><tspan fill="#6272a4"> ........ </tspan></text>
+  <text x="638" y="334" text-anchor="end" class="line fadein" style="animation-delay:0.72s" fill="#f8f8f2">96</text>
+  <text x="218" y="351" class="line fadein" style="animation-delay:0.765s"><tspan fill="#8be9fd">Lines of Code</tspan><tspan fill="#6272a4"> ............ </tspan></text>
+  <text x="463.52" y="351" text-anchor="end" class="line fadein" style="animation-delay:0.765s" fill="#f8f8f2">122,210</text>
+  <text x="638" y="351" text-anchor="end" class="line fadein" style="animation-delay:0.765s"><tspan fill="#50fa7b">184,320++</tspan><tspan fill="#f8f8f2">  </tspan><tspan fill="#ff5555">62,110--</tspan></text>
+</svg>
