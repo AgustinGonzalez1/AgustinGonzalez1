@@ -34,12 +34,54 @@ FRAMEWORK_MAP = {
 }
 
 
+def _find_package_json_frameworks(api, owner, name, branch):
+    """Walks the whole repo tree (not just the root) for every package.json
+    -- monorepos often keep the real app under packages/*/package.json or
+    apps/*/package.json -- and unions the known frameworks found in each,
+    skipping anything under node_modules."""
+    try:
+        tree = api.rest_get(f"/repos/{owner}/{name}/git/trees/{branch}", params={"recursive": "1"})
+    except GitHubAPIError as exc:
+        print(f"[stats] WARNING: could not list files for {owner}/{name} ({exc}); skipping framework scan.")
+        return []
+
+    if not tree or not tree.get("tree"):
+        return []
+
+    entries = tree["tree"]
+    package_json_entries = [
+        entry
+        for entry in entries
+        if entry.get("type") == "blob"
+        and entry["path"].rsplit("/", 1)[-1] == "package.json"
+        and "node_modules/" not in entry["path"]
+    ]
+
+    found = set()
+    for entry in package_json_entries:
+        try:
+            blob = api.rest_get(f"/repos/{owner}/{name}/git/blobs/{entry['sha']}")
+        except GitHubAPIError as exc:
+            print(f"[stats] WARNING: could not read {entry['path']} in {owner}/{name} ({exc}); skipping.")
+            continue
+        if not blob or blob.get("encoding") != "base64":
+            continue
+        try:
+            manifest = json.loads(base64.b64decode(blob["content"]))
+        except (ValueError, TypeError):
+            continue
+        deps = {**manifest.get("dependencies", {}), **manifest.get("devDependencies", {})}
+        found.update(pkg for pkg in deps if pkg in FRAMEWORK_MAP)
+
+    return sorted(found)
+
+
 def scan_frameworks(api, repos, framework_cache):
-    """Scans each repo's package.json dependencies for known frameworks.
-    Cached per-repo by `pushedAt`, same idea as collect_loc, so unchanged
-    repos aren't re-fetched. Just populates the cache -- ranking happens in
-    collect_weighted_most_popular, weighted by the user's actual LOC in
-    each repo rather than a flat per-repo count."""
+    """Scans every package.json in each repo (root and subfolders) for
+    known frameworks. Cached per-repo by `pushedAt`, same idea as
+    collect_loc, so unchanged repos aren't re-fetched. Just populates the
+    cache -- ranking happens in collect_weighted_most_popular, weighted by
+    the user's actual LOC in each repo rather than a flat per-repo count."""
     framework_cache = dict(framework_cache or {})
 
     for repo in repos:
@@ -50,22 +92,13 @@ def scan_frameworks(api, repos, framework_cache):
         if cached and cached.get("pushedAt") == pushed_at:
             continue
 
+        branch_ref = repo.get("defaultBranchRef")
+        if not branch_ref:
+            framework_cache[full_name] = {"pushedAt": pushed_at, "frameworks": []}
+            continue
+
         owner, name = full_name.split("/", 1)
-        try:
-            content = api.rest_get(f"/repos/{owner}/{name}/contents/package.json")
-        except GitHubAPIError as exc:
-            print(f"[stats] WARNING: could not fetch package.json for {full_name} ({exc}); skipping.")
-            content = None
-
-        found = []
-        if content and content.get("encoding") == "base64":
-            try:
-                manifest = json.loads(base64.b64decode(content["content"]))
-                deps = {**manifest.get("dependencies", {}), **manifest.get("devDependencies", {})}
-                found = [pkg for pkg in deps if pkg in FRAMEWORK_MAP]
-            except (ValueError, TypeError):
-                found = []
-
+        found = _find_package_json_frameworks(api, owner, name, branch_ref["name"])
         framework_cache[full_name] = {"pushedAt": pushed_at, "frameworks": found}
 
     return framework_cache
@@ -113,6 +146,7 @@ query ($login: String!, $after: String) {
         nameWithOwner
         isFork
         pushedAt
+        defaultBranchRef { name }
         languages(first: 10, orderBy: { field: SIZE, direction: DESC }) {
           edges {
             size
@@ -137,6 +171,7 @@ query ($login: String!, $after: String) {
         isFork
         stargazerCount
         pushedAt
+        defaultBranchRef { name }
         languages(first: 10, orderBy: { field: SIZE, direction: DESC }) {
           edges {
             size

@@ -81,12 +81,13 @@ in the project root. Open the SVGs directly in a browser to check the layout:
 xdg-open dark_mode.svg
 ```
 
-The first real run will be slow-ish (it scans contributor stats and
-`package.json` for every repo you own **and** every repo you've committed
-to elsewhere, to compute lines of code and detect frameworks). Subsequent
-runs are much faster because `cache/loc_cache.json` and
-`cache/framework_cache.json` both skip any repo whose `pushedAt` timestamp
-hasn't changed since the last scan.
+The first real run will be slow-ish (it scans contributor stats, and walks
+each repo's full file tree looking for every `package.json` -- root and
+subfolders, so monorepos like `packages/frontend/package.json` are found
+too -- for every repo you own **and** every repo you've committed to
+elsewhere). Subsequent runs are much faster because `cache/loc_cache.json`
+and `cache/framework_cache.json` both skip any repo whose `pushedAt`
+timestamp hasn't changed since the last scan.
 
 Note: because "Lines of Code" and "Most Popular" now include repos you've
 committed to but don't own, both numbers can be a bit larger than before
