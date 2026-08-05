@@ -76,6 +76,14 @@ def _find_package_json_frameworks(api, owner, name, branch):
     return sorted(found)
 
 
+# Bump this whenever the scanning logic in _find_package_json_frameworks
+# changes -- e.g. root-only -> whole-tree. Otherwise repos that haven't
+# been pushed to since the old logic ran would keep serving stale cached
+# results forever, since the cache is keyed by `pushedAt`, not by how the
+# scan was done.
+FRAMEWORK_CACHE_VERSION = 2
+
+
 def scan_frameworks(api, repos, framework_cache):
     """Scans every package.json in each repo (root and subfolders) for
     known frameworks. Cached per-repo by `pushedAt`, same idea as
@@ -83,6 +91,9 @@ def scan_frameworks(api, repos, framework_cache):
     cache -- ranking happens in collect_weighted_most_popular, weighted by
     the user's actual LOC in each repo rather than a flat per-repo count."""
     framework_cache = dict(framework_cache or {})
+    if framework_cache.get("_version") != FRAMEWORK_CACHE_VERSION:
+        print("[stats] Framework scan logic changed, invalidating cached results.")
+        framework_cache = {"_version": FRAMEWORK_CACHE_VERSION}
 
     for repo in repos:
         full_name = repo["nameWithOwner"]
