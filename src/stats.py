@@ -30,13 +30,13 @@ FRAMEWORK_MAP = {
 }
 
 
-def collect_top_frameworks(api, repos, framework_cache, top_n=6):
-    """Scans each repo's package.json dependencies for known frameworks and
-    ranks them by how many repos use them. Cached per-repo by `pushedAt`,
-    same idea as collect_loc, so unchanged repos aren't re-fetched."""
+def scan_frameworks(api, repos, framework_cache):
+    """Scans each repo's package.json dependencies for known frameworks.
+    Cached per-repo by `pushedAt`, same idea as collect_loc, so unchanged
+    repos aren't re-fetched. Just populates the cache -- ranking happens in
+    collect_weighted_most_popular, weighted by the user's actual LOC in
+    each repo rather than a flat per-repo count."""
     framework_cache = dict(framework_cache or {})
-    repos_with_manifest = 0
-    usage_counts = {}
 
     for repo in repos:
         full_name = repo["nameWithOwner"]
@@ -44,46 +44,27 @@ def collect_top_frameworks(api, repos, framework_cache, top_n=6):
         cached = framework_cache.get(full_name)
 
         if cached and cached.get("pushedAt") == pushed_at:
-            found = cached.get("frameworks", [])
-            has_manifest = cached.get("has_manifest", False)
-        else:
-            owner, name = full_name.split("/", 1)
+            continue
+
+        owner, name = full_name.split("/", 1)
+        try:
+            content = api.rest_get(f"/repos/{owner}/{name}/contents/package.json")
+        except GitHubAPIError as exc:
+            print(f"[stats] WARNING: could not fetch package.json for {full_name} ({exc}); skipping.")
+            content = None
+
+        found = []
+        if content and content.get("encoding") == "base64":
             try:
-                content = api.rest_get(f"/repos/{owner}/{name}/contents/package.json")
-            except GitHubAPIError as exc:
-                print(f"[stats] WARNING: could not fetch package.json for {full_name} ({exc}); skipping.")
-                content = None
+                manifest = json.loads(base64.b64decode(content["content"]))
+                deps = {**manifest.get("dependencies", {}), **manifest.get("devDependencies", {})}
+                found = [pkg for pkg in deps if pkg in FRAMEWORK_MAP]
+            except (ValueError, TypeError):
+                found = []
 
-            found = []
-            has_manifest = False
-            if content and content.get("encoding") == "base64":
-                has_manifest = True
-                try:
-                    manifest = json.loads(base64.b64decode(content["content"]))
-                    deps = {**manifest.get("dependencies", {}), **manifest.get("devDependencies", {})}
-                    found = [pkg for pkg in deps if pkg in FRAMEWORK_MAP]
-                except (ValueError, TypeError):
-                    found = []
+        framework_cache[full_name] = {"pushedAt": pushed_at, "frameworks": found}
 
-            framework_cache[full_name] = {"pushedAt": pushed_at, "frameworks": found, "has_manifest": has_manifest}
-
-        if has_manifest:
-            repos_with_manifest += 1
-        for pkg in found:
-            usage_counts[pkg] = usage_counts.get(pkg, 0) + 1
-
-    if repos_with_manifest == 0:
-        return [], framework_cache
-
-    ranked = sorted(usage_counts.items(), key=lambda kv: kv[1], reverse=True)[:top_n]
-    return [
-        {
-            "name": FRAMEWORK_MAP[pkg][0],
-            "percent": round(count / repos_with_manifest * 100, 1),
-            "color": FRAMEWORK_MAP[pkg][1],
-        }
-        for pkg, count in ranked
-    ], framework_cache
+    return framework_cache
 
 USER_INFO_QUERY = """
 query {
@@ -105,6 +86,36 @@ query ($login: String!) {
       contributionTypes: [COMMIT, ISSUE, PULL_REQUEST, REPOSITORY]
     ) {
       totalCount
+    }
+  }
+}
+"""
+
+# Separate from the count above: this fetches the actual repos (excluding
+# ones the user owns, which are already covered by OWNED_REPOS_QUERY) that
+# the user has *committed* to, so "Most Popular" can see languages used in
+# other people's repos too, not just the user's own.
+COMMIT_CONTRIBUTED_REPOS_QUERY = """
+query ($login: String!, $after: String) {
+  user(login: $login) {
+    repositoriesContributedTo(
+      first: 50
+      after: $after
+      includeUserRepositories: false
+      contributionTypes: [COMMIT]
+    ) {
+      pageInfo { hasNextPage endCursor }
+      nodes {
+        nameWithOwner
+        isFork
+        pushedAt
+        languages(first: 10, orderBy: { field: SIZE, direction: DESC }) {
+          edges {
+            size
+            node { name color }
+          }
+        }
+      }
     }
   }
 }
@@ -165,6 +176,22 @@ def collect_contributed_repos_count(api, login):
     return data["user"]["repositoriesContributedTo"]["totalCount"]
 
 
+def collect_commit_contributed_repos(api, login):
+    """Paginates through repos (not owned by `login`) that `login` has
+    committed to -- so language/framework stats aren't limited to the
+    user's own repos."""
+    repos = []
+    after = None
+    while True:
+        data = api.graphql(COMMIT_CONTRIBUTED_REPOS_QUERY, {"login": login, "after": after})
+        block = data["user"]["repositoriesContributedTo"]
+        repos.extend(block["nodes"])
+        if not block["pageInfo"]["hasNextPage"]:
+            break
+        after = block["pageInfo"]["endCursor"]
+    return repos
+
+
 def collect_total_commits(api, created_at_iso):
     """Sums commit contributions (public + private) across every year since account creation.
 
@@ -187,22 +214,66 @@ def collect_total_commits(api, created_at_iso):
     return total
 
 
-def collect_top_languages(repos, top_n=3):
-    """Aggregates bytes-of-code per language across repos and returns the top N by share."""
-    totals = {}
-    colors = {}
-    for repo in repos:
-        for edge in repo["languages"]["edges"]:
-            name = edge["node"]["name"]
-            totals[name] = totals.get(name, 0) + edge["size"]
-            colors[name] = edge["node"]["color"] or "#8b8b8b"
+def collect_weighted_most_popular(repos, loc_cache, framework_cache, top_n=6):
+    """Ranks languages and frameworks by the user's *actual* LOC contribution
+    per repo (from loc_cache), not by raw repo byte totals or a flat
+    per-repo dependency count -- so a repo you barely touched doesn't count
+    as much as one you've put thousands of lines into. A repo's LOC is
+    split across its languages proportionally to that repo's own byte
+    breakdown, since GitHub doesn't expose LOC-per-language directly.
+    """
+    lang_weight = {}
+    lang_colors = {}
+    fw_weight = {}
+    total_weight = 0.0
+    fw_total_weight = 0.0
 
-    total_bytes = sum(totals.values()) or 1
-    ranked = sorted(totals.items(), key=lambda kv: kv[1], reverse=True)[:top_n]
-    return [
-        {"name": name, "percent": round(size / total_bytes * 100, 1), "color": colors[name]}
-        for name, size in ranked
-    ]
+    for repo in repos:
+        full_name = repo["nameWithOwner"]
+        loc_entry = loc_cache.get(full_name)
+        if not loc_entry:
+            continue
+        user_loc = loc_entry.get("additions", 0) + loc_entry.get("deletions", 0)
+        if user_loc <= 0:
+            continue
+
+        edges = repo["languages"]["edges"]
+        repo_total_bytes = sum(e["size"] for e in edges) or 1
+        for edge in edges:
+            name = edge["node"]["name"]
+            share = edge["size"] / repo_total_bytes
+            lang_weight[name] = lang_weight.get(name, 0) + user_loc * share
+            lang_colors[name] = edge["node"]["color"] or "#8b8b8b"
+        total_weight += user_loc
+
+        fw_entry = framework_cache.get(full_name)
+        found = fw_entry.get("frameworks") if fw_entry else None
+        if found:
+            fw_total_weight += user_loc
+            for pkg in found:
+                fw_weight[pkg] = fw_weight.get(pkg, 0) + user_loc
+
+    languages = []
+    if total_weight:
+        ranked = sorted(lang_weight.items(), key=lambda kv: kv[1], reverse=True)[:top_n]
+        languages = [
+            {"name": name, "percent": round(w / total_weight * 100, 1), "color": lang_colors[name]}
+            for name, w in ranked
+        ]
+
+    frameworks = []
+    if fw_total_weight:
+        ranked = sorted(fw_weight.items(), key=lambda kv: kv[1], reverse=True)[:top_n]
+        frameworks = [
+            {
+                "name": FRAMEWORK_MAP[pkg][0],
+                "percent": round(w / fw_total_weight * 100, 1),
+                "color": FRAMEWORK_MAP[pkg][1],
+            }
+            for pkg, w in ranked
+        ]
+
+    return languages, frameworks
 
 
 def collect_loc(api, login, repos, loc_cache):

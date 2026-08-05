@@ -18,12 +18,13 @@ from src import cache
 from src.github_api import GitHubAPI, GitHubAPIError
 from src.stats import (
     USER_INFO_QUERY,
+    collect_commit_contributed_repos,
     collect_contributed_repos_count,
     collect_loc,
     collect_owned_repos,
-    collect_top_frameworks,
-    collect_top_languages,
     collect_total_commits,
+    collect_weighted_most_popular,
+    scan_frameworks,
 )
 from src.svg_render import render_svg
 
@@ -59,9 +60,10 @@ def _uptime_string(created_at_iso):
 
 
 def _combine_most_popular(languages, frameworks, top_n):
-    """Languages are ranked by % of code bytes, frameworks by % of repos
-    that depend on them -- different units, but both 0-100 shares, so a
-    blended ranking is a reasonable approximation for a fun stats card."""
+    """Both languages and frameworks are already weighted by the user's LOC
+    contribution (see collect_weighted_most_popular), just normalized
+    against slightly different denominators (all repos vs. only repos with
+    a package.json) -- close enough to blend into one ranking."""
     combined = sorted(languages + frameworks, key=lambda item: item["percent"], reverse=True)
     return combined[:top_n]
 
@@ -77,20 +79,31 @@ def gather_stats(api):
     non_fork_repos = [r for r in repos if not r["isFork"]]
     print(f"[today] {len(repos)} owned repos ({len(non_fork_repos)} non-fork)")
 
+    commit_contributed_repos = collect_commit_contributed_repos(api, login)
+    print(f"[today] {len(commit_contributed_repos)} other repos committed to")
+
+    # "Most Popular" looks at everything the user has actually put code
+    # into -- their own repos plus repos they've committed to elsewhere --
+    # not just what they own.
+    owned_names = {r["nameWithOwner"] for r in non_fork_repos}
+    combined_repos = non_fork_repos + [r for r in commit_contributed_repos if r["nameWithOwner"] not in owned_names]
+
     stars = sum(r["stargazerCount"] for r in non_fork_repos)
-    top_languages = collect_top_languages(non_fork_repos, top_n=MOST_POPULAR_COUNT)
-
-    framework_cache = cache.load("framework_cache.json", {})
-    top_frameworks, framework_cache = collect_top_frameworks(api, non_fork_repos, framework_cache, top_n=MOST_POPULAR_COUNT)
-    cache.save("framework_cache.json", framework_cache)
-
-    most_popular = _combine_most_popular(top_languages, top_frameworks, MOST_POPULAR_COUNT)
 
     commits = collect_total_commits(api, viewer["createdAt"])
 
     loc_cache = cache.load("loc_cache.json", {})
-    loc_added, loc_deleted, loc_cache = collect_loc(api, login, non_fork_repos, loc_cache)
+    loc_added, loc_deleted, loc_cache = collect_loc(api, login, combined_repos, loc_cache)
     cache.save("loc_cache.json", loc_cache)
+
+    framework_cache = cache.load("framework_cache.json", {})
+    framework_cache = scan_frameworks(api, combined_repos, framework_cache)
+    cache.save("framework_cache.json", framework_cache)
+
+    top_languages, top_frameworks = collect_weighted_most_popular(
+        combined_repos, loc_cache, framework_cache, top_n=MOST_POPULAR_COUNT
+    )
+    most_popular = _combine_most_popular(top_languages, top_frameworks, MOST_POPULAR_COUNT)
 
     contributed_count = collect_contributed_repos_count(api, login)
 
