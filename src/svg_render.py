@@ -70,6 +70,20 @@ LOGO_WIDTH_COLS = 21
 LOGO_STROKE = 3
 LOGO_DEPTH = 5
 
+# The V + "Most Popular" list live inside one bordered box, sized to its own
+# content instead of stretching to the full card height.
+BOX_PAD_TOP = 20
+BOX_PAD_BOTTOM = 16
+BOX_PAD_X = 14
+GAP_V_TO_DIVIDER = 14
+GAP_DIVIDER_TO_HEADING = 16
+TOP_ALIGN_OFFSET = 10
+BOTTOM_ALIGN_OFFSET = 6
+
+MOST_POPULAR_FONT_SIZE = 11
+MOST_POPULAR_LINE_HEIGHT = 17
+MOST_POPULAR_SWATCH = 8
+
 
 def _build_logo_rows():
     """A bold 'V' drawn as a block-character grid (ascii-art style) instead
@@ -170,7 +184,7 @@ def _build_rows(stats):
     rb.spacer()
 
     rb.text("Languages.Programming", ", ".join(stats["languages_programming"]))
-    rb.text("Languages.Computer", ", ".join(stats["languages_computer"]))
+    rb.text("Frameworks", ", ".join(stats["languages_computer"]))
     rb.text("Languages.Real", ", ".join(stats["languages_real"]))
     rb.spacer()
 
@@ -247,13 +261,47 @@ def render_svg(stats, mode="dark"):
     content_height = sum(row_heights)
     height = round(content_height + TOP_MARGIN + BOTTOM_PADDING)
 
-    # --- "V" logo (left column), drawn as ascii-art block chars with a
-    # dark offset copy behind it to fake a 3D extruded/beveled block. ---
+    # --- "V" logo (left column), boxed in its own bordered frame, drawn as
+    # ascii-art block chars with a dark offset copy behind it to fake a 3D
+    # extruded/beveled block. A compact "Most Popular" list sits inside the
+    # same box, below a divider line -- so the box is the only separator
+    # between the logo area and the info column, sized to its own content
+    # instead of stretching the full card height. ---
     logo_rows = _build_logo_rows()
     logo_w = LOGO_WIDTH_COLS * LOGO_CHAR_WIDTH
     logo_h = LOGO_HEIGHT_ROWS * LOGO_LINE_HEIGHT
-    logo_x = LEFT_MARGIN + (LOGO_BOX_WIDTH - logo_w) / 2
-    logo_y = TOP_MARGIN + (content_height - logo_h) / 2
+
+    most_popular = stats.get("most_popular") or []
+    box_x = LEFT_MARGIN
+    gap_v_to_divider = GAP_V_TO_DIVIDER
+    gap_divider_to_heading = GAP_DIVIDER_TO_HEADING
+
+    if most_popular:
+        # Box spans edge-to-edge with the info column: top aligned with the
+        # top of the "user@github" header, bottom aligned with the last info
+        # row. Whatever extra height that adds (beyond the box's own snug
+        # content) is split between the gap above and below the divider
+        # line, so it has breathing room on both sides instead of just
+        # pushing the V away from it.
+        box_y = TOP_MARGIN - TOP_ALIGN_OFFSET
+        box_h = content_height + TOP_ALIGN_OFFSET + BOTTOM_ALIGN_OFFSET
+
+        mp_section_h = GAP_V_TO_DIVIDER + GAP_DIVIDER_TO_HEADING + MOST_POPULAR_LINE_HEIGHT * (1 + len(most_popular))
+        natural_h = BOX_PAD_TOP + logo_h + mp_section_h + BOX_PAD_BOTTOM
+        extra = max(0, box_h - natural_h)
+        gap_v_to_divider = GAP_V_TO_DIVIDER + extra / 2
+        gap_divider_to_heading = GAP_DIVIDER_TO_HEADING + extra / 2
+    else:
+        box_h = BOX_PAD_TOP + logo_h + BOX_PAD_BOTTOM
+        box_y = TOP_MARGIN + (content_height - box_h) / 2
+
+    logo_x = box_x + (LOGO_BOX_WIDTH - logo_w) / 2
+    logo_y = box_y + BOX_PAD_TOP
+
+    parts.append(
+        f'<rect x="{box_x}" y="{box_y:.1f}" width="{LOGO_BOX_WIDTH}" height="{box_h:.1f}" rx="8" '
+        f'fill="none" stroke="{theme["border"]}" stroke-width="1" />'
+    )
 
     logo_lines = []
     ly = LOGO_LINE_HEIGHT
@@ -280,11 +328,30 @@ def render_svg(stats, mode="dark"):
         f"{logo_body}</g>"
     )
 
-    divider_x = LEFT_MARGIN + LOGO_BOX_WIDTH + DIVIDER_GAP / 2
-    parts.append(
-        f'<line x1="{divider_x:.1f}" y1="{TOP_MARGIN - 6}" x2="{divider_x:.1f}" '
-        f'y2="{TOP_MARGIN - 6 + content_height}" class="divider" />'
-    )
+    if most_popular:
+        line_y = logo_y + logo_h + gap_v_to_divider
+        parts.append(
+            f'<line x1="{box_x + BOX_PAD_X:.1f}" y1="{line_y:.1f}" '
+            f'x2="{box_x + LOGO_BOX_WIDTH - BOX_PAD_X:.1f}" y2="{line_y:.1f}" class="divider" />'
+        )
+
+        mp_y = line_y + gap_divider_to_heading
+        parts.append(
+            f'<text x="{box_x + BOX_PAD_X}" y="{mp_y:.1f}" fill="{theme["section"]}" '
+            f'style="font-family:{FONT_STACK};font-size:{INFO_FONT_SIZE}px;font-weight:bold;">Most Popular</text>'
+        )
+        mp_y += MOST_POPULAR_LINE_HEIGHT
+        for lang in most_popular:
+            parts.append(
+                f'<rect x="{box_x + BOX_PAD_X}" y="{mp_y - MOST_POPULAR_SWATCH:.1f}" '
+                f'width="{MOST_POPULAR_SWATCH}" height="{MOST_POPULAR_SWATCH}" rx="2" fill="{lang["color"]}" />'
+            )
+            parts.append(
+                f'<text x="{box_x + BOX_PAD_X + MOST_POPULAR_SWATCH + 6}" y="{mp_y:.1f}" fill="{theme["value"]}" '
+                f'style="font-family:{FONT_STACK};font-size:{MOST_POPULAR_FONT_SIZE}px;">{_esc(lang["name"])} '
+                f'<tspan fill="{theme["muted"]}">{lang["percent"]}%</tspan></text>'
+            )
+            mp_y += MOST_POPULAR_LINE_HEIGHT
 
     def dashes_after(text_start_x, char_w, text, y_pos):
         text_width = len(text) * char_w

@@ -74,18 +74,18 @@ python3 today.py
 ```
 
 This writes/updates `dark_mode.svg`, `light_mode.svg`, and
-`cache/loc_cache.json` + `cache/last_stats.json` in the project root. Open
-the SVGs directly in a browser to check the layout (and see the spinning
-"V" logo animate):
+`cache/loc_cache.json` + `cache/framework_cache.json` + `cache/last_stats.json`
+in the project root. Open the SVGs directly in a browser to check the layout:
 
 ```bash
 xdg-open dark_mode.svg
 ```
 
 The first real run will be slow-ish (it scans every owned repo's
-contributor stats to compute lines of code). Subsequent runs are much
-faster because `cache/loc_cache.json` skips any repo whose `pushedAt`
-timestamp hasn't changed since the last scan.
+contributor stats to compute lines of code, and fetches each repo's
+`package.json` to detect frameworks). Subsequent runs are much faster
+because `cache/loc_cache.json` and `cache/framework_cache.json` both skip
+any repo whose `pushedAt` timestamp hasn't changed since the last scan.
 
 ## 5. Push to GitHub
 

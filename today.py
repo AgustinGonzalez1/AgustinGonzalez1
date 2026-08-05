@@ -21,11 +21,14 @@ from src.stats import (
     collect_contributed_repos_count,
     collect_loc,
     collect_owned_repos,
+    collect_top_frameworks,
+    collect_top_languages,
     collect_total_commits,
 )
 from src.svg_render import render_svg
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
+MOST_POPULAR_COUNT = 6
 
 # --- Personalize this section for your own profile -------------------------
 OS_LIST = "Linux, Windows"
@@ -55,6 +58,14 @@ def _uptime_string(created_at_iso):
     return ", ".join(parts)
 
 
+def _combine_most_popular(languages, frameworks, top_n):
+    """Languages are ranked by % of code bytes, frameworks by % of repos
+    that depend on them -- different units, but both 0-100 shares, so a
+    blended ranking is a reasonable approximation for a fun stats card."""
+    combined = sorted(languages + frameworks, key=lambda item: item["percent"], reverse=True)
+    return combined[:top_n]
+
+
 def gather_stats(api):
     data = api.graphql(USER_INFO_QUERY)
     viewer = data["viewer"]
@@ -67,6 +78,13 @@ def gather_stats(api):
     print(f"[today] {len(repos)} owned repos ({len(non_fork_repos)} non-fork)")
 
     stars = sum(r["stargazerCount"] for r in non_fork_repos)
+    top_languages = collect_top_languages(non_fork_repos, top_n=MOST_POPULAR_COUNT)
+
+    framework_cache = cache.load("framework_cache.json", {})
+    top_frameworks, framework_cache = collect_top_frameworks(api, non_fork_repos, framework_cache, top_n=MOST_POPULAR_COUNT)
+    cache.save("framework_cache.json", framework_cache)
+
+    most_popular = _combine_most_popular(top_languages, top_frameworks, MOST_POPULAR_COUNT)
 
     commits = collect_total_commits(api, viewer["createdAt"])
 
@@ -90,6 +108,7 @@ def gather_stats(api):
         "contact_linkedin": CONTACT_LINKEDIN,
         "contact_discord": CONTACT_DISCORD,
         "contact_portfolio": CONTACT_PORTFOLIO,
+        "most_popular": most_popular,
         "repos_owned": viewer["repositories"]["totalCount"],
         "repos_contributed": contributed_count,
         "stars": stars,
@@ -115,6 +134,14 @@ def mock_stats():
         "contact_linkedin": CONTACT_LINKEDIN,
         "contact_discord": CONTACT_DISCORD,
         "contact_portfolio": CONTACT_PORTFOLIO,
+        "most_popular": [
+            {"name": "TypeScript", "percent": 41.2, "color": "#3178c6"},
+            {"name": "React", "percent": 33.3, "color": "#61dafb"},
+            {"name": "Python", "percent": 27.8, "color": "#3572A5"},
+            {"name": "JavaScript", "percent": 18.5, "color": "#f1e05a"},
+            {"name": "Next.js", "percent": 14.2, "color": "#ffffff"},
+            {"name": "CSS", "percent": 9.6, "color": "#563d7c"},
+        ],
         "repos_owned": 42,
         "repos_contributed": 17,
         "stars": 128,
