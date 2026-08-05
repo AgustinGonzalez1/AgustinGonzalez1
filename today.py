@@ -38,6 +38,7 @@ HOBBY_REAL = "Making YouTube videos"
 CONTACT_EMAIL = "agus.devvv@gmail.com"
 CONTACT_LINKEDIN = "linkedin.com/in/ricardoagustingonzalez"
 CONTACT_DISCORD = "agustin.dev"
+CONTACT_PORTFOLIO = "www.vulcanis.com.ar"
 # -----------------------------------------------------------------------------
 
 
@@ -88,6 +89,7 @@ def gather_stats(api):
         "contact_email": CONTACT_EMAIL,
         "contact_linkedin": CONTACT_LINKEDIN,
         "contact_discord": CONTACT_DISCORD,
+        "contact_portfolio": CONTACT_PORTFOLIO,
         "repos_owned": viewer["repositories"]["totalCount"],
         "repos_contributed": contributed_count,
         "stars": stars,
@@ -112,6 +114,7 @@ def mock_stats():
         "contact_email": CONTACT_EMAIL,
         "contact_linkedin": CONTACT_LINKEDIN,
         "contact_discord": CONTACT_DISCORD,
+        "contact_portfolio": CONTACT_PORTFOLIO,
         "repos_owned": 42,
         "repos_contributed": 17,
         "stars": 128,

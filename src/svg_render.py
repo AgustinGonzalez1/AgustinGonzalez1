@@ -183,6 +183,7 @@ def _build_rows(stats):
     rb.text("Email", stats["contact_email"])
     rb.text("LinkedIn", stats["contact_linkedin"])
     rb.text("Discord", stats["contact_discord"])
+    rb.text("Portfolio", stats["contact_portfolio"])
     rb.spacer()
 
     rb.section("GitHub Stats")
