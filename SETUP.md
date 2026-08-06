@@ -37,7 +37,7 @@ followers, etc.
 
 ## 2. Add it as a repository secret
 
-1. In `AgustinGonzalez1/AgustinGonzalez1` go to **Settings → Secrets and
+1. In `your-username/your-username` go to **Settings → Secrets and
    variables → Actions → New repository secret**.
 2. Name: `ACCESS_TOKEN`
 3. Value: the token you just copied.
@@ -97,16 +97,24 @@ code, not just your own repos.
 ## 5. Push to GitHub
 
 Commit everything (including the `cache/` folder — that's what makes reruns
-fast both locally and in Actions) and push to `AgustinGonzalez1/AgustinGonzalez1`
+fast both locally and in Actions) and push to `your-username/your-username`
 on the `main` branch. The README embeds the SVGs from that exact path, so
 keep the filenames (`dark_mode.svg`, `light_mode.svg`) and branch (`main`)
 as-is, or update the URLs in `README.md` if you rename anything.
 
 ## 6. Trigger the workflow
 
-- It runs automatically every 12 hours (`cron: "0 */12 * * *"`).
+- It runs automatically once a day at 00:00 UTC (`cron: "0 0 * * *"`).
 - To run it on demand: **Actions tab → "Update profile stats" → Run
   workflow**.
+
+## Promoting the repo
+
+Once it's live, remember to actually share it (post it, link it from your
+other repos' READMEs, etc.) — a generated stats card doesn't get seen on
+its own. If you want people to star this repo, ask for it explicitly when
+you share it; a repo's README isn't the place for a "please star" banner
+since visitors land on your *profile*, not this repo's page.
 
 ## Troubleshooting
 
