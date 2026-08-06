@@ -31,6 +31,11 @@
       "percent": 44.2
     },
     {
+      "color": "#41b883",
+      "name": "Vue.js",
+      "percent": 43.2
+    },
+    {
       "color": "#61dafb",
       "name": "React",
       "percent": 35.8
@@ -39,11 +44,6 @@
       "color": "#3178c6",
       "name": "TypeScript",
       "percent": 22.2
-    },
-    {
-      "color": "#41b883",
-      "name": "Vue",
-      "percent": 17.4
     },
     {
       "color": "#8b8b8b",

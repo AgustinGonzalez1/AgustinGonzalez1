@@ -26,12 +26,12 @@
   <text x="38" y="256.0" fill="#cf222e" style="font-family:'Cascadia Code','Fira Code',Consolas,'Liberation Mono',Menlo,monospace;font-size:12px;font-weight:bold;">Most Popular</text>
   <rect x="38" y="265.0" width="8" height="8" rx="2" fill="#f1e05a" />
   <text x="52" y="273.0" fill="#24292f" style="font-family:'Cascadia Code','Fira Code',Consolas,'Liberation Mono',Menlo,monospace;font-size:11px;">JavaScript <tspan fill="#afb8c1">44.2%</tspan></text>
-  <rect x="38" y="282.0" width="8" height="8" rx="2" fill="#61dafb" />
-  <text x="52" y="290.0" fill="#24292f" style="font-family:'Cascadia Code','Fira Code',Consolas,'Liberation Mono',Menlo,monospace;font-size:11px;">React <tspan fill="#afb8c1">35.8%</tspan></text>
-  <rect x="38" y="299.0" width="8" height="8" rx="2" fill="#3178c6" />
-  <text x="52" y="307.0" fill="#24292f" style="font-family:'Cascadia Code','Fira Code',Consolas,'Liberation Mono',Menlo,monospace;font-size:11px;">TypeScript <tspan fill="#afb8c1">22.2%</tspan></text>
-  <rect x="38" y="316.0" width="8" height="8" rx="2" fill="#41b883" />
-  <text x="52" y="324.0" fill="#24292f" style="font-family:'Cascadia Code','Fira Code',Consolas,'Liberation Mono',Menlo,monospace;font-size:11px;">Vue <tspan fill="#afb8c1">17.4%</tspan></text>
+  <rect x="38" y="282.0" width="8" height="8" rx="2" fill="#41b883" />
+  <text x="52" y="290.0" fill="#24292f" style="font-family:'Cascadia Code','Fira Code',Consolas,'Liberation Mono',Menlo,monospace;font-size:11px;">Vue.js <tspan fill="#afb8c1">43.2%</tspan></text>
+  <rect x="38" y="299.0" width="8" height="8" rx="2" fill="#61dafb" />
+  <text x="52" y="307.0" fill="#24292f" style="font-family:'Cascadia Code','Fira Code',Consolas,'Liberation Mono',Menlo,monospace;font-size:11px;">React <tspan fill="#afb8c1">35.8%</tspan></text>
+  <rect x="38" y="316.0" width="8" height="8" rx="2" fill="#3178c6" />
+  <text x="52" y="324.0" fill="#24292f" style="font-family:'Cascadia Code','Fira Code',Consolas,'Liberation Mono',Menlo,monospace;font-size:11px;">TypeScript <tspan fill="#afb8c1">22.2%</tspan></text>
   <rect x="38" y="333.0" width="8" height="8" rx="2" fill="#8b8b8b" />
   <text x="52" y="341.0" fill="#24292f" style="font-family:'Cascadia Code','Fira Code',Consolas,'Liberation Mono',Menlo,monospace;font-size:11px;">Express <tspan fill="#afb8c1">15.6%</tspan></text>
   <rect x="38" y="350.0" width="8" height="8" rx="2" fill="#ffffff" />

@@ -69,21 +69,20 @@ def _canonical_tech_name(name):
 def _combine_most_popular(languages, frameworks, top_n):
     """Languages and frameworks are both weighted by the user's LOC and
     divided by the same total (see collect_weighted_most_popular), so their
-    percentages are on the same scale. They still can't just be summed
-    though: when a language and a framework name the same underlying tech
-    (e.g. "Vue" the language vs "Vue.js" the framework dependency), they're
-    two overlapping estimates of the same code, not two different things to
-    add up. The language entry wins those collisions -- it's the more
-    precise, directly-measured one (actual file bytes, not "this repo
-    depends on X"). The framework entry is only kept when there's no
-    language counterpart (e.g. React/Next.js have no dedicated GitHub
-    language, they're just JavaScript/TypeScript bytes).
+    percentages are on the same scale and can be compared directly. They
+    still can't just be summed though: when a language and a framework name
+    the same underlying tech (e.g. "Vue" the language, just .vue file
+    bytes, vs "Vue.js" the framework, which also counts the surrounding
+    .js/.ts code in the same repos), they're two overlapping estimates of
+    the same work, not two different things to add up -- so on a collision
+    we keep whichever one is larger, which is now a fair comparison since
+    both are on the same scale.
     """
     by_key = {}
-    for item in languages:
-        by_key[_canonical_tech_name(item["name"])] = item
-    for item in frameworks:
-        by_key.setdefault(_canonical_tech_name(item["name"]), item)
+    for item in languages + frameworks:
+        key = _canonical_tech_name(item["name"])
+        if key not in by_key or item["percent"] > by_key[key]["percent"]:
+            by_key[key] = item
 
     combined = sorted(by_key.values(), key=lambda item: item["percent"], reverse=True)
     return combined[:top_n]
