@@ -22,13 +22,13 @@
   "languages_real": [
     "Spanish"
   ],
-  "loc_added": 753019,
-  "loc_deleted": 337627,
+  "loc_added": 754875,
+  "loc_deleted": 337909,
   "most_popular": [
     {
       "color": "#f1e05a",
       "name": "JavaScript",
-      "percent": 44.3
+      "percent": 44.2
     },
     {
       "color": "#61dafb",
@@ -48,7 +48,7 @@
     {
       "color": "#8b8b8b",
       "name": "Express",
-      "percent": 15.7
+      "percent": 15.6
     },
     {
       "color": "#ffffff",
