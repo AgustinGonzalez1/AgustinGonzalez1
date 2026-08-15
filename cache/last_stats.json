@@ -1,5 +1,5 @@
 {
-  "commits": 3606,
+  "commits": 3609,
   "contact_discord": "agustin.dev",
   "contact_email": "agus.devvv@gmail.com",
   "contact_linkedin": "linkedin.com/in/ricardoagustingonzalez",
@@ -22,8 +22,8 @@
   "languages_real": [
     "Spanish"
   ],
-  "loc_added": 761537,
-  "loc_deleted": 340125,
+  "loc_added": 762590,
+  "loc_deleted": 340588,
   "most_popular": [
     {
       "color": "#f1e05a",
@@ -38,7 +38,7 @@
     {
       "color": "#61dafb",
       "name": "React",
-      "percent": 35.6
+      "percent": 35.5
     },
     {
       "color": "#3178c6",
