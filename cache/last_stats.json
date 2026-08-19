@@ -1,10 +1,10 @@
 {
-  "commits": 3611,
+  "commits": 3619,
   "contact_discord": "agustin.dev",
   "contact_email": "agus.devvv@gmail.com",
   "contact_linkedin": "linkedin.com/in/ricardoagustingonzalez",
   "contact_portfolio": "www.vulcanis.com.ar",
-  "followers": 9,
+  "followers": 10,
   "hobby_real": "Making YouTube videos",
   "hobby_software": "Web Scraping",
   "ide": "VSCode",
@@ -22,38 +22,38 @@
   "languages_real": [
     "Spanish"
   ],
-  "loc_added": 762625,
-  "loc_deleted": 340612,
+  "loc_added": 768362,
+  "loc_deleted": 341409,
   "most_popular": [
     {
       "color": "#f1e05a",
       "name": "JavaScript",
-      "percent": 43.3
+      "percent": 43.0
     },
     {
       "color": "#41b883",
       "name": "Vue.js",
-      "percent": 42.9
+      "percent": 42.6
     },
     {
       "color": "#61dafb",
       "name": "React",
-      "percent": 35.5
+      "percent": 35.9
     },
     {
       "color": "#3178c6",
       "name": "TypeScript",
-      "percent": 22.0
+      "percent": 22.4
     },
     {
       "color": "#8b8b8b",
       "name": "Express",
-      "percent": 15.5
+      "percent": 15.4
     },
     {
       "color": "#ffffff",
       "name": "Next.js",
-      "percent": 11.9
+      "percent": 12.4
     }
   ],
   "os_list": "Linux, Windows",

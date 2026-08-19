@@ -25,17 +25,17 @@
   <line x1="38.0" y1="222.9" x2="180.0" y2="222.9" class="divider" />
   <text x="38" y="256.0" fill="#cf222e" style="font-family:'Cascadia Code','Fira Code',Consolas,'Liberation Mono',Menlo,monospace;font-size:12px;font-weight:bold;">Most Popular</text>
   <rect x="38" y="265.0" width="8" height="8" rx="2" fill="#f1e05a" />
-  <text x="52" y="273.0" fill="#24292f" style="font-family:'Cascadia Code','Fira Code',Consolas,'Liberation Mono',Menlo,monospace;font-size:11px;">JavaScript <tspan fill="#afb8c1">43.3%</tspan></text>
+  <text x="52" y="273.0" fill="#24292f" style="font-family:'Cascadia Code','Fira Code',Consolas,'Liberation Mono',Menlo,monospace;font-size:11px;">JavaScript <tspan fill="#afb8c1">43.0%</tspan></text>
   <rect x="38" y="282.0" width="8" height="8" rx="2" fill="#41b883" />
-  <text x="52" y="290.0" fill="#24292f" style="font-family:'Cascadia Code','Fira Code',Consolas,'Liberation Mono',Menlo,monospace;font-size:11px;">Vue.js <tspan fill="#afb8c1">42.9%</tspan></text>
+  <text x="52" y="290.0" fill="#24292f" style="font-family:'Cascadia Code','Fira Code',Consolas,'Liberation Mono',Menlo,monospace;font-size:11px;">Vue.js <tspan fill="#afb8c1">42.6%</tspan></text>
   <rect x="38" y="299.0" width="8" height="8" rx="2" fill="#61dafb" />
-  <text x="52" y="307.0" fill="#24292f" style="font-family:'Cascadia Code','Fira Code',Consolas,'Liberation Mono',Menlo,monospace;font-size:11px;">React <tspan fill="#afb8c1">35.5%</tspan></text>
+  <text x="52" y="307.0" fill="#24292f" style="font-family:'Cascadia Code','Fira Code',Consolas,'Liberation Mono',Menlo,monospace;font-size:11px;">React <tspan fill="#afb8c1">35.9%</tspan></text>
   <rect x="38" y="316.0" width="8" height="8" rx="2" fill="#3178c6" />
-  <text x="52" y="324.0" fill="#24292f" style="font-family:'Cascadia Code','Fira Code',Consolas,'Liberation Mono',Menlo,monospace;font-size:11px;">TypeScript <tspan fill="#afb8c1">22.0%</tspan></text>
+  <text x="52" y="324.0" fill="#24292f" style="font-family:'Cascadia Code','Fira Code',Consolas,'Liberation Mono',Menlo,monospace;font-size:11px;">TypeScript <tspan fill="#afb8c1">22.4%</tspan></text>
   <rect x="38" y="333.0" width="8" height="8" rx="2" fill="#8b8b8b" />
-  <text x="52" y="341.0" fill="#24292f" style="font-family:'Cascadia Code','Fira Code',Consolas,'Liberation Mono',Menlo,monospace;font-size:11px;">Express <tspan fill="#afb8c1">15.5%</tspan></text>
+  <text x="52" y="341.0" fill="#24292f" style="font-family:'Cascadia Code','Fira Code',Consolas,'Liberation Mono',Menlo,monospace;font-size:11px;">Express <tspan fill="#afb8c1">15.4%</tspan></text>
   <rect x="38" y="350.0" width="8" height="8" rx="2" fill="#ffffff" />
-  <text x="52" y="358.0" fill="#24292f" style="font-family:'Cascadia Code','Fira Code',Consolas,'Liberation Mono',Menlo,monospace;font-size:11px;">Next.js <tspan fill="#afb8c1">11.9%</tspan></text>
+  <text x="52" y="358.0" fill="#24292f" style="font-family:'Cascadia Code','Fira Code',Consolas,'Liberation Mono',Menlo,monospace;font-size:11px;">Next.js <tspan fill="#afb8c1">12.4%</tspan></text>
   <text x="218" y="30" class="prompt fadein" style="animation-delay:0.0s"><tspan fill="#1a7f37" font-weight="bold">AgustinGonzalez1</tspan><tspan fill="#24292f">@</tspan><tspan fill="#1a7f37" font-weight="bold">github</tspan></text>
   <line x1="421.2" y1="26" x2="638" y2="26" class="hr" />
   <text x="218" y="47" class="line fadein" style="animation-delay:0.045s"><tspan fill="#0969da">OS</tspan><tspan fill="#afb8c1"> ........................................ </tspan></text>
@@ -73,10 +73,10 @@
   <text x="487.52" y="334" class="line fadein" style="animation-delay:0.72s"><tspan fill="#0969da">Stars</tspan><tspan fill="#afb8c1"> ............. </tspan></text>
   <text x="638" y="334" text-anchor="end" class="line fadein" style="animation-delay:0.72s" fill="#24292f">3</text>
   <text x="218" y="351" class="line fadein" style="animation-delay:0.765s"><tspan fill="#0969da">Commits</tspan><tspan fill="#afb8c1"> .................... </tspan></text>
-  <text x="463.52" y="351" text-anchor="end" class="line fadein" style="animation-delay:0.765s" fill="#24292f">3,611</text>
-  <text x="487.52" y="351" class="line fadein" style="animation-delay:0.765s"><tspan fill="#0969da">Followers</tspan><tspan fill="#afb8c1"> ......... </tspan></text>
-  <text x="638" y="351" text-anchor="end" class="line fadein" style="animation-delay:0.765s" fill="#24292f">9</text>
+  <text x="463.52" y="351" text-anchor="end" class="line fadein" style="animation-delay:0.765s" fill="#24292f">3,619</text>
+  <text x="487.52" y="351" class="line fadein" style="animation-delay:0.765s"><tspan fill="#0969da">Followers</tspan><tspan fill="#afb8c1"> ........ </tspan></text>
+  <text x="638" y="351" text-anchor="end" class="line fadein" style="animation-delay:0.765s" fill="#24292f">10</text>
   <text x="218" y="368" class="line fadein" style="animation-delay:0.81s"><tspan fill="#0969da">Lines of Code</tspan><tspan fill="#afb8c1"> ............ </tspan></text>
-  <text x="463.52" y="368" text-anchor="end" class="line fadein" style="animation-delay:0.81s" fill="#24292f">422,013</text>
-  <text x="638" y="368" text-anchor="end" class="line fadein" style="animation-delay:0.81s"><tspan fill="#1a7f37">762,625++</tspan><tspan fill="#24292f">  </tspan><tspan fill="#cf222e">340,612--</tspan></text>
+  <text x="463.52" y="368" text-anchor="end" class="line fadein" style="animation-delay:0.81s" fill="#24292f">426,953</text>
+  <text x="638" y="368" text-anchor="end" class="line fadein" style="animation-delay:0.81s"><tspan fill="#1a7f37">768,362++</tspan><tspan fill="#24292f">  </tspan><tspan fill="#cf222e">341,409--</tspan></text>
 </svg>
