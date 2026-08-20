@@ -1,5 +1,5 @@
 {
-  "commits": 3619,
+  "commits": 3623,
   "contact_discord": "agustin.dev",
   "contact_email": "agus.devvv@gmail.com",
   "contact_linkedin": "linkedin.com/in/ricardoagustingonzalez",
@@ -22,8 +22,8 @@
   "languages_real": [
     "Spanish"
   ],
-  "loc_added": 768362,
-  "loc_deleted": 341409,
+  "loc_added": 768855,
+  "loc_deleted": 341582,
   "most_popular": [
     {
       "color": "#f1e05a",
@@ -43,7 +43,7 @@
     {
       "color": "#3178c6",
       "name": "TypeScript",
-      "percent": 22.4
+      "percent": 22.5
     },
     {
       "color": "#8b8b8b",
@@ -57,7 +57,7 @@
     }
   ],
   "os_list": "Linux, Windows",
-  "repos_contributed": 25,
+  "repos_contributed": 24,
   "repos_owned": 70,
   "stars": 3,
   "uptime": "3 years, 8 months",
