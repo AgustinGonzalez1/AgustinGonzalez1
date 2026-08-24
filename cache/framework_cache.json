@@ -1,7 +1,7 @@
 {
   "AgustinGonzalez1/AgustinGonzalez1": {
     "frameworks": [],
-    "pushedAt": "2026-08-22T01:01:32Z"
+    "pushedAt": "2026-08-23T01:06:55Z"
   },
   "AgustinGonzalez1/AppClima": {
     "frameworks": [],
@@ -382,6 +382,12 @@
       "vue"
     ],
     "pushedAt": "2026-08-11T22:33:13Z"
+  },
+  "NovigoTechnology/nagus": {
+    "frameworks": [
+      "vue"
+    ],
+    "pushedAt": "2026-08-23T23:44:09Z"
   },
   "NovigoTechnology/nvg-ui": {
     "frameworks": [
