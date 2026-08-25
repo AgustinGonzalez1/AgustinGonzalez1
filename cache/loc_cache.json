@@ -2,7 +2,7 @@
   "AgustinGonzalez1/AgustinGonzalez1": {
     "additions": 1898,
     "deletions": 317,
-    "pushedAt": "2026-08-23T01:06:55Z"
+    "pushedAt": "2026-08-24T01:04:29Z"
   },
   "AgustinGonzalez1/AppClima": {
     "additions": 1343,
@@ -115,9 +115,9 @@
     "pushedAt": "2025-11-09T18:20:46Z"
   },
   "AgustinGonzalez1/clases": {
-    "additions": 7477,
-    "deletions": 2291,
-    "pushedAt": "2026-08-20T21:45:57Z"
+    "additions": 7521,
+    "deletions": 2303,
+    "pushedAt": "2026-08-24T22:07:09Z"
   },
   "AgustinGonzalez1/codiguitos": {
     "additions": 9203,
@@ -349,6 +349,11 @@
     "deletions": 5,
     "pushedAt": "2024-03-28T13:30:45Z"
   },
+  "NovigoTechnology/csf_argentina": {
+    "additions": 374,
+    "deletions": 334,
+    "pushedAt": "2026-08-24T20:26:12Z"
+  },
   "NovigoTechnology/hefesto": {
     "additions": 81,
     "deletions": 62,
@@ -362,17 +367,17 @@
   "NovigoTechnology/nagus": {
     "additions": 48766,
     "deletions": 38150,
-    "pushedAt": "2026-08-23T23:44:09Z"
+    "pushedAt": "2026-08-24T19:20:21Z"
   },
   "NovigoTechnology/nvg-ui": {
     "additions": 228705,
     "deletions": 196278,
-    "pushedAt": "2026-08-17T20:29:04Z"
+    "pushedAt": "2026-08-24T17:00:32Z"
   },
   "NovigoTechnology/nvg_base": {
     "additions": 25372,
-    "deletions": 19647,
-    "pushedAt": "2026-08-22T12:44:19Z"
+    "deletions": 19700,
+    "pushedAt": "2026-08-24T15:21:48Z"
   },
   "mintecc/project_z4": {
     "additions": 62342,
