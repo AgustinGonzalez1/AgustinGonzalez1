@@ -1,5 +1,5 @@
 {
-  "commits": 4002,
+  "commits": 4026,
   "contact_discord": "agustin.dev",
   "contact_email": "agus.devvv@gmail.com",
   "contact_linkedin": "linkedin.com/in/ricardoagustingonzalez",
@@ -22,33 +22,33 @@
   "languages_real": [
     "Spanish"
   ],
-  "loc_added": 818545,
-  "loc_deleted": 380241,
+  "loc_added": 821015,
+  "loc_deleted": 381788,
   "most_popular": [
     {
       "color": "#41b883",
       "name": "Vue.js",
-      "percent": 42.0
+      "percent": 42.1
     },
     {
       "color": "#f1e05a",
       "name": "JavaScript",
-      "percent": 41.7
+      "percent": 40.4
     },
     {
       "color": "#61dafb",
       "name": "React",
-      "percent": 33.2
+      "percent": 33.1
     },
     {
       "color": "#3178c6",
       "name": "TypeScript",
-      "percent": 20.8
+      "percent": 20.7
     },
     {
       "color": "#8b8b8b",
       "name": "Express",
-      "percent": 14.3
+      "percent": 14.2
     },
     {
       "color": "#ffffff",
@@ -57,7 +57,7 @@
     }
   ],
   "os_list": "Linux, Windows",
-  "repos_contributed": 24,
+  "repos_contributed": 23,
   "repos_owned": 70,
   "stars": 3,
   "uptime": "3 years, 8 months",
