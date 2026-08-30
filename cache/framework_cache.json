@@ -1,7 +1,7 @@
 {
   "AgustinGonzalez1/AgustinGonzalez1": {
     "frameworks": [],
-    "pushedAt": "2026-08-28T08:54:17Z"
+    "pushedAt": "2026-08-29T05:30:26Z"
   },
   "AgustinGonzalez1/AppClima": {
     "frameworks": [],
@@ -375,11 +375,11 @@
   },
   "NovigoTechnology/csf_argentina": {
     "frameworks": [],
-    "pushedAt": "2026-08-29T00:27:27Z"
+    "pushedAt": "2026-08-29T19:58:05Z"
   },
   "NovigoTechnology/hefesto": {
     "frameworks": [],
-    "pushedAt": "2026-08-19T13:54:42Z"
+    "pushedAt": "2026-08-29T19:55:04Z"
   },
   "NovigoTechnology/heracles": {
     "frameworks": [
@@ -391,7 +391,7 @@
     "frameworks": [
       "vue"
     ],
-    "pushedAt": "2026-08-29T03:15:13Z"
+    "pushedAt": "2026-08-29T19:58:31Z"
   },
   "NovigoTechnology/nvg-ui": {
     "frameworks": [
@@ -403,7 +403,7 @@
     "frameworks": [
       "vue"
     ],
-    "pushedAt": "2026-08-29T00:34:55Z"
+    "pushedAt": "2026-08-30T03:19:40Z"
   },
   "_version": 2,
   "mintecc/project_z4": {

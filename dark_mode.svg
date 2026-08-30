@@ -25,7 +25,7 @@
   <line x1="38.0" y1="222.9" x2="180.0" y2="222.9" class="divider" />
   <text x="38" y="256.0" fill="#ff79c6" style="font-family:'Cascadia Code','Fira Code',Consolas,'Liberation Mono',Menlo,monospace;font-size:12px;font-weight:bold;">Most Popular</text>
   <rect x="38" y="265.0" width="8" height="8" rx="2" fill="#41b883" />
-  <text x="52" y="273.0" fill="#f8f8f2" style="font-family:'Cascadia Code','Fira Code',Consolas,'Liberation Mono',Menlo,monospace;font-size:11px;">Vue.js <tspan fill="#6272a4">42.2%</tspan></text>
+  <text x="52" y="273.0" fill="#f8f8f2" style="font-family:'Cascadia Code','Fira Code',Consolas,'Liberation Mono',Menlo,monospace;font-size:11px;">Vue.js <tspan fill="#6272a4">42.1%</tspan></text>
   <rect x="38" y="282.0" width="8" height="8" rx="2" fill="#f1e05a" />
   <text x="52" y="290.0" fill="#f8f8f2" style="font-family:'Cascadia Code','Fira Code',Consolas,'Liberation Mono',Menlo,monospace;font-size:11px;">JavaScript <tspan fill="#6272a4">40.4%</tspan></text>
   <rect x="38" y="299.0" width="8" height="8" rx="2" fill="#61dafb" />
