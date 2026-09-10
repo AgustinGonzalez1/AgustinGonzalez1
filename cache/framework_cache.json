@@ -1,7 +1,7 @@
 {
   "AgustinGonzalez1/AgustinGonzalez1": {
     "frameworks": [],
-    "pushedAt": "2026-09-08T02:55:35Z"
+    "pushedAt": "2026-09-09T02:55:59Z"
   },
   "AgustinGonzalez1/AppClima": {
     "frameworks": [],
@@ -240,10 +240,9 @@
   },
   "AgustinGonzalez1/portfolio-astro": {
     "frameworks": [
-      "astro",
-      "react"
+      "astro"
     ],
-    "pushedAt": "2026-09-08T17:29:52Z"
+    "pushedAt": "2026-09-09T18:19:18Z"
   },
   "AgustinGonzalez1/practica-post-preEntrega3": {
     "frameworks": [],
@@ -375,7 +374,7 @@
   },
   "NovigoTechnology/csf_argentina": {
     "frameworks": [],
-    "pushedAt": "2026-09-08T21:20:50Z"
+    "pushedAt": "2026-09-09T16:48:44Z"
   },
   "NovigoTechnology/hefesto": {
     "frameworks": [],
@@ -391,7 +390,7 @@
     "frameworks": [
       "vue"
     ],
-    "pushedAt": "2026-09-08T17:35:18Z"
+    "pushedAt": "2026-09-09T18:01:27Z"
   },
   "NovigoTechnology/nvg-ui": {
     "frameworks": [
@@ -403,7 +402,7 @@
     "frameworks": [
       "vue"
     ],
-    "pushedAt": "2026-09-08T17:08:26Z"
+    "pushedAt": "2026-09-09T12:24:07Z"
   },
   "_version": 2,
   "mintecc/project_z4": {
