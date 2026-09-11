@@ -29,7 +29,7 @@
   <rect x="38" y="282.0" width="8" height="8" rx="2" fill="#f1e05a" />
   <text x="52" y="290.0" fill="#f8f8f2" style="font-family:'Cascadia Code','Fira Code',Consolas,'Liberation Mono',Menlo,monospace;font-size:11px;">JavaScript <tspan fill="#6272a4">40.1%</tspan></text>
   <rect x="38" y="299.0" width="8" height="8" rx="2" fill="#61dafb" />
-  <text x="52" y="307.0" fill="#f8f8f2" style="font-family:'Cascadia Code','Fira Code',Consolas,'Liberation Mono',Menlo,monospace;font-size:11px;">React <tspan fill="#6272a4">33.0%</tspan></text>
+  <text x="52" y="307.0" fill="#f8f8f2" style="font-family:'Cascadia Code','Fira Code',Consolas,'Liberation Mono',Menlo,monospace;font-size:11px;">React <tspan fill="#6272a4">32.9%</tspan></text>
   <rect x="38" y="316.0" width="8" height="8" rx="2" fill="#3178c6" />
   <text x="52" y="324.0" fill="#f8f8f2" style="font-family:'Cascadia Code','Fira Code',Consolas,'Liberation Mono',Menlo,monospace;font-size:11px;">TypeScript <tspan fill="#6272a4">21.0%</tspan></text>
   <rect x="38" y="333.0" width="8" height="8" rx="2" fill="#8b8b8b" />
@@ -41,7 +41,7 @@
   <text x="218" y="47" class="line fadein" style="animation-delay:0.045s"><tspan fill="#8be9fd">OS</tspan><tspan fill="#6272a4"> ........................................ </tspan></text>
   <text x="638" y="47" text-anchor="end" class="line fadein" style="animation-delay:0.045s" fill="#f8f8f2">Linux, Windows</text>
   <text x="218" y="64" class="line fadein" style="animation-delay:0.09s"><tspan fill="#8be9fd">Uptime</tspan><tspan fill="#6272a4"> ................................. </tspan></text>
-  <text x="638" y="64" text-anchor="end" class="line fadein" style="animation-delay:0.09s" fill="#f8f8f2">3 years, 8 months</text>
+  <text x="638" y="64" text-anchor="end" class="line fadein" style="animation-delay:0.09s" fill="#f8f8f2">3 years, 9 months</text>
   <text x="218" y="81" class="line fadein" style="animation-delay:0.135s"><tspan fill="#8be9fd">IDE</tspan><tspan fill="#6272a4"> ............................................... </tspan></text>
   <text x="638" y="81" text-anchor="end" class="line fadein" style="animation-delay:0.135s" fill="#f8f8f2">VSCode</text>
   <text x="218" y="106" class="line fadein" style="animation-delay:0.18s"><tspan fill="#8be9fd">Languages.Programming</tspan><tspan fill="#6272a4"> ..... </tspan></text>
@@ -73,10 +73,10 @@
   <text x="487.52" y="334" class="line fadein" style="animation-delay:0.72s"><tspan fill="#8be9fd">Stars</tspan><tspan fill="#6272a4"> ............. </tspan></text>
   <text x="638" y="334" text-anchor="end" class="line fadein" style="animation-delay:0.72s" fill="#f8f8f2">3</text>
   <text x="218" y="351" class="line fadein" style="animation-delay:0.765s"><tspan fill="#8be9fd">Commits</tspan><tspan fill="#6272a4"> .................... </tspan></text>
-  <text x="463.52" y="351" text-anchor="end" class="line fadein" style="animation-delay:0.765s" fill="#f8f8f2">4,129</text>
+  <text x="463.52" y="351" text-anchor="end" class="line fadein" style="animation-delay:0.765s" fill="#f8f8f2">4,134</text>
   <text x="487.52" y="351" class="line fadein" style="animation-delay:0.765s"><tspan fill="#8be9fd">Followers</tspan><tspan fill="#6272a4"> ........ </tspan></text>
   <text x="638" y="351" text-anchor="end" class="line fadein" style="animation-delay:0.765s" fill="#f8f8f2">10</text>
   <text x="218" y="368" class="line fadein" style="animation-delay:0.81s"><tspan fill="#8be9fd">Lines of Code</tspan><tspan fill="#6272a4"> ............ </tspan></text>
-  <text x="463.52" y="368" text-anchor="end" class="line fadein" style="animation-delay:0.81s" fill="#f8f8f2">430,885</text>
-  <text x="638" y="368" text-anchor="end" class="line fadein" style="animation-delay:0.81s"><tspan fill="#50fa7b">800,645++</tspan><tspan fill="#f8f8f2">  </tspan><tspan fill="#ff5555">369,760--</tspan></text>
+  <text x="463.52" y="368" text-anchor="end" class="line fadein" style="animation-delay:0.81s" fill="#f8f8f2">430,939</text>
+  <text x="638" y="368" text-anchor="end" class="line fadein" style="animation-delay:0.81s"><tspan fill="#50fa7b">800,754++</tspan><tspan fill="#f8f8f2">  </tspan><tspan fill="#ff5555">369,815--</tspan></text>
 </svg>
