@@ -1,5 +1,5 @@
 {
-  "commits": 4165,
+  "commits": 4172,
   "contact_discord": "agustin.dev",
   "contact_email": "agus.devvv@gmail.com",
   "contact_linkedin": "linkedin.com/in/ricardoagustingonzalez",
@@ -22,28 +22,28 @@
   "languages_real": [
     "Spanish"
   ],
-  "loc_added": 810098,
-  "loc_deleted": 376096,
+  "loc_added": 813574,
+  "loc_deleted": 376997,
   "most_popular": [
     {
       "color": "#41b883",
       "name": "Vue.js",
-      "percent": 40.4
+      "percent": 40.3
     },
     {
       "color": "#f1e05a",
       "name": "JavaScript",
-      "percent": 39.6
+      "percent": 39.4
     },
     {
       "color": "#61dafb",
       "name": "React",
-      "percent": 33.2
+      "percent": 33.1
     },
     {
       "color": "#3178c6",
       "name": "TypeScript",
-      "percent": 21.4
+      "percent": 21.3
     },
     {
       "color": "#8b8b8b",
