@@ -1,5 +1,5 @@
 {
-  "commits": 4188,
+  "commits": 4190,
   "contact_discord": "agustin.dev",
   "contact_email": "agus.devvv@gmail.com",
   "contact_linkedin": "linkedin.com/in/ricardoagustingonzalez",
@@ -22,7 +22,7 @@
   "languages_real": [
     "Spanish"
   ],
-  "loc_added": 815255,
+  "loc_added": 815291,
   "loc_deleted": 377326,
   "most_popular": [
     {
@@ -57,8 +57,8 @@
     }
   ],
   "os_list": "Linux, Windows",
-  "repos_contributed": 24,
-  "repos_owned": 71,
+  "repos_contributed": 25,
+  "repos_owned": 72,
   "stars": 3,
   "uptime": "3 years, 9 months",
   "username": "AgustinGonzalez1"

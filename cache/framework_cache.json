@@ -1,7 +1,7 @@
 {
   "AgustinGonzalez1/AgustinGonzalez1": {
     "frameworks": [],
-    "pushedAt": "2026-09-30T03:51:01Z"
+    "pushedAt": "2026-10-01T03:59:03Z"
   },
   "AgustinGonzalez1/AppClima": {
     "frameworks": [],
@@ -309,6 +309,10 @@
     ],
     "pushedAt": "2024-05-26T22:22:48Z"
   },
+  "AgustinGonzalez1/redirect": {
+    "frameworks": [],
+    "pushedAt": "2026-10-01T14:26:25Z"
+  },
   "AgustinGonzalez1/sa-next-shadcn": {
     "frameworks": [
       "next",
@@ -396,7 +400,7 @@
     "frameworks": [
       "vue"
     ],
-    "pushedAt": "2026-09-30T20:06:42Z"
+    "pushedAt": "2026-10-01T18:57:26Z"
   },
   "NovigoTechnology/nvg-ui": {
     "frameworks": [

@@ -2,7 +2,7 @@
   "AgustinGonzalez1/AgustinGonzalez1": {
     "additions": 1898,
     "deletions": 317,
-    "pushedAt": "2026-09-30T03:51:01Z"
+    "pushedAt": "2026-10-01T03:59:03Z"
   },
   "AgustinGonzalez1/AppClima": {
     "additions": 1343,
@@ -294,6 +294,11 @@
     "deletions": 26,
     "pushedAt": "2024-05-26T22:22:48Z"
   },
+  "AgustinGonzalez1/redirect": {
+    "additions": 36,
+    "deletions": 0,
+    "pushedAt": "2026-10-01T14:26:25Z"
+  },
   "AgustinGonzalez1/sa-next-shadcn": {
     "additions": 4868,
     "deletions": 184,
@@ -372,7 +377,7 @@
   "NovigoTechnology/nagus": {
     "additions": 50565,
     "deletions": 39302,
-    "pushedAt": "2026-09-30T20:06:42Z"
+    "pushedAt": "2026-10-01T18:57:26Z"
   },
   "NovigoTechnology/nvg-ui": {
     "additions": 230664,
