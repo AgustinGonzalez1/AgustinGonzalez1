@@ -2,7 +2,7 @@
   "AgustinGonzalez1/AgustinGonzalez1": {
     "additions": 1898,
     "deletions": 317,
-    "pushedAt": "2026-10-05T03:54:27Z"
+    "pushedAt": "2026-10-06T04:42:55Z"
   },
   "AgustinGonzalez1/AppClima": {
     "additions": 1343,
@@ -155,9 +155,9 @@
     "pushedAt": "2023-08-08T22:29:34Z"
   },
   "AgustinGonzalez1/desbloquea": {
-    "additions": 3613,
-    "deletions": 409,
-    "pushedAt": "2026-09-15T18:50:04Z"
+    "additions": 4121,
+    "deletions": 860,
+    "pushedAt": "2026-10-06T16:45:33Z"
   },
   "AgustinGonzalez1/docu": {
     "additions": 19794,
@@ -377,17 +377,22 @@
   "NovigoTechnology/nagus": {
     "additions": 50594,
     "deletions": 39311,
-    "pushedAt": "2026-10-06T03:10:00Z"
+    "pushedAt": "2026-10-06T19:05:01Z"
+  },
+  "NovigoTechnology/nagus-docs": {
+    "additions": 12,
+    "deletions": 1,
+    "pushedAt": "2026-10-06T13:19:47Z"
   },
   "NovigoTechnology/nvg-ui": {
     "additions": 230664,
     "deletions": 197819,
-    "pushedAt": "2026-10-05T12:07:28Z"
+    "pushedAt": "2026-10-06T18:08:25Z"
   },
   "NovigoTechnology/nvg_base": {
     "additions": 28177,
     "deletions": 22922,
-    "pushedAt": "2026-10-05T13:32:25Z"
+    "pushedAt": "2026-10-06T19:09:06Z"
   },
   "mintecc/project_z4": {
     "additions": 62342,
