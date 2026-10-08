@@ -1,7 +1,7 @@
 {
   "AgustinGonzalez1/AgustinGonzalez1": {
     "frameworks": [],
-    "pushedAt": "2026-10-07T04:09:01Z"
+    "pushedAt": "2026-10-08T04:20:53Z"
   },
   "AgustinGonzalez1/AppClima": {
     "frameworks": [],
@@ -112,6 +112,10 @@
   "AgustinGonzalez1/calculator": {
     "frameworks": [],
     "pushedAt": "2023-06-08T16:39:14Z"
+  },
+  "AgustinGonzalez1/cartas": {
+    "frameworks": [],
+    "pushedAt": "2026-10-08T13:06:16Z"
   },
   "AgustinGonzalez1/challenge-itrock": {
     "frameworks": [
@@ -248,7 +252,7 @@
     "frameworks": [
       "astro"
     ],
-    "pushedAt": "2026-09-18T02:23:55Z"
+    "pushedAt": "2026-10-08T08:49:48Z"
   },
   "AgustinGonzalez1/practica-post-preEntrega3": {
     "frameworks": [],
@@ -400,7 +404,7 @@
     "frameworks": [
       "vue"
     ],
-    "pushedAt": "2026-10-07T20:14:02Z"
+    "pushedAt": "2026-10-08T13:01:56Z"
   },
   "NovigoTechnology/nagus-docs": {
     "frameworks": [],
@@ -410,7 +414,7 @@
     "frameworks": [
       "vue"
     ],
-    "pushedAt": "2026-10-06T18:08:25Z"
+    "pushedAt": "2026-10-08T12:42:05Z"
   },
   "NovigoTechnology/nvg_base": {
     "frameworks": [
