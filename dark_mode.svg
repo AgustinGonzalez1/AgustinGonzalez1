@@ -73,10 +73,10 @@
   <text x="487.52" y="334" class="line fadein" style="animation-delay:0.72s"><tspan fill="#8be9fd">Stars</tspan><tspan fill="#6272a4"> ............. </tspan></text>
   <text x="638" y="334" text-anchor="end" class="line fadein" style="animation-delay:0.72s" fill="#f8f8f2">3</text>
   <text x="218" y="351" class="line fadein" style="animation-delay:0.765s"><tspan fill="#8be9fd">Commits</tspan><tspan fill="#6272a4"> .................... </tspan></text>
-  <text x="463.52" y="351" text-anchor="end" class="line fadein" style="animation-delay:0.765s" fill="#f8f8f2">4,220</text>
+  <text x="463.52" y="351" text-anchor="end" class="line fadein" style="animation-delay:0.765s" fill="#f8f8f2">4,221</text>
   <text x="487.52" y="351" class="line fadein" style="animation-delay:0.765s"><tspan fill="#8be9fd">Followers</tspan><tspan fill="#6272a4"> ........ </tspan></text>
   <text x="638" y="351" text-anchor="end" class="line fadein" style="animation-delay:0.765s" fill="#f8f8f2">11</text>
   <text x="218" y="368" class="line fadein" style="animation-delay:0.81s"><tspan fill="#8be9fd">Lines of Code</tspan><tspan fill="#6272a4"> ............ </tspan></text>
-  <text x="463.52" y="368" text-anchor="end" class="line fadein" style="animation-delay:0.81s" fill="#f8f8f2">442,718</text>
-  <text x="638" y="368" text-anchor="end" class="line fadein" style="animation-delay:0.81s"><tspan fill="#50fa7b">823,570++</tspan><tspan fill="#f8f8f2">  </tspan><tspan fill="#ff5555">380,852--</tspan></text>
+  <text x="463.52" y="368" text-anchor="end" class="line fadein" style="animation-delay:0.81s" fill="#f8f8f2">442,750</text>
+  <text x="638" y="368" text-anchor="end" class="line fadein" style="animation-delay:0.81s"><tspan fill="#50fa7b">823,625++</tspan><tspan fill="#f8f8f2">  </tspan><tspan fill="#ff5555">380,875--</tspan></text>
 </svg>
