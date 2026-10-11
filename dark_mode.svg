@@ -40,8 +40,8 @@
   <line x1="421.2" y1="26" x2="638" y2="26" class="hr" />
   <text x="218" y="47" class="line fadein" style="animation-delay:0.045s"><tspan fill="#8be9fd">OS</tspan><tspan fill="#6272a4"> ........................................ </tspan></text>
   <text x="638" y="47" text-anchor="end" class="line fadein" style="animation-delay:0.045s" fill="#f8f8f2">Linux, Windows</text>
-  <text x="218" y="64" class="line fadein" style="animation-delay:0.09s"><tspan fill="#8be9fd">Uptime</tspan><tspan fill="#6272a4"> ................................. </tspan></text>
-  <text x="638" y="64" text-anchor="end" class="line fadein" style="animation-delay:0.09s" fill="#f8f8f2">3 years, 9 months</text>
+  <text x="218" y="64" class="line fadein" style="animation-delay:0.09s"><tspan fill="#8be9fd">Uptime</tspan><tspan fill="#6272a4"> ................................ </tspan></text>
+  <text x="638" y="64" text-anchor="end" class="line fadein" style="animation-delay:0.09s" fill="#f8f8f2">3 years, 10 months</text>
   <text x="218" y="81" class="line fadein" style="animation-delay:0.135s"><tspan fill="#8be9fd">IDE</tspan><tspan fill="#6272a4"> ............................................... </tspan></text>
   <text x="638" y="81" text-anchor="end" class="line fadein" style="animation-delay:0.135s" fill="#f8f8f2">VSCode</text>
   <text x="218" y="106" class="line fadein" style="animation-delay:0.18s"><tspan fill="#8be9fd">Languages.Programming</tspan><tspan fill="#6272a4"> ..... </tspan></text>
