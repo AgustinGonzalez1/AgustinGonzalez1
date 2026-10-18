@@ -1,5 +1,5 @@
 {
-  "commits": 4278,
+  "commits": 4286,
   "contact_discord": "agustin.dev",
   "contact_email": "agus.devvv@gmail.com",
   "contact_linkedin": "linkedin.com/in/ricardoagustingonzalez",
@@ -22,38 +22,38 @@
   "languages_real": [
     "Spanish"
   ],
-  "loc_added": 836881,
-  "loc_deleted": 384942,
+  "loc_added": 841863,
+  "loc_deleted": 385552,
   "most_popular": [
     {
       "color": "#f1e05a",
       "name": "JavaScript",
-      "percent": 39.5
+      "percent": 39.3
     },
     {
       "color": "#41b883",
       "name": "Vue.js",
-      "percent": 39.2
+      "percent": 39.1
     },
     {
       "color": "#61dafb",
       "name": "React",
-      "percent": 32.2
+      "percent": 32.1
     },
     {
       "color": "#3178c6",
       "name": "TypeScript",
-      "percent": 20.8
+      "percent": 20.7
     },
     {
       "color": "#8b8b8b",
       "name": "Express",
-      "percent": 14.0
+      "percent": 13.9
     },
     {
       "color": "#ffffff",
       "name": "Next.js",
-      "percent": 11.3
+      "percent": 11.2
     }
   ],
   "os_list": "Linux, Windows",
