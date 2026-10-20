@@ -1,7 +1,7 @@
 {
   "AgustinGonzalez1/AgustinGonzalez1": {
     "frameworks": [],
-    "pushedAt": "2026-10-18T02:54:14Z"
+    "pushedAt": "2026-10-19T03:07:19Z"
   },
   "AgustinGonzalez1/AppClima": {
     "frameworks": [],
@@ -75,6 +75,12 @@
     "frameworks": [],
     "pushedAt": "2023-05-24T23:27:58Z"
   },
+  "AgustinGonzalez1/alter": {
+    "frameworks": [
+      "astro"
+    ],
+    "pushedAt": "2026-10-19T18:48:11Z"
+  },
   "AgustinGonzalez1/api-front": {
     "frameworks": [
       "express",
@@ -115,7 +121,7 @@
   },
   "AgustinGonzalez1/cartas": {
     "frameworks": [],
-    "pushedAt": "2026-10-17T02:59:41Z"
+    "pushedAt": "2026-10-19T16:09:06Z"
   },
   "AgustinGonzalez1/challenge-itrock": {
     "frameworks": [
@@ -392,11 +398,11 @@
   },
   "NovigoTechnology/csf_argentina": {
     "frameworks": [],
-    "pushedAt": "2026-10-18T16:02:08Z"
+    "pushedAt": "2026-10-19T20:13:09Z"
   },
   "NovigoTechnology/hefesto": {
     "frameworks": [],
-    "pushedAt": "2026-10-19T03:03:00Z"
+    "pushedAt": "2026-10-19T10:20:30Z"
   },
   "NovigoTechnology/heracles": {
     "frameworks": [
@@ -408,7 +414,7 @@
     "frameworks": [
       "vue"
     ],
-    "pushedAt": "2026-10-18T14:55:39Z"
+    "pushedAt": "2026-10-19T20:08:14Z"
   },
   "NovigoTechnology/nagus-docs": {
     "frameworks": [],
@@ -418,13 +424,13 @@
     "frameworks": [
       "vue"
     ],
-    "pushedAt": "2026-10-13T11:20:54Z"
+    "pushedAt": "2026-10-19T19:53:50Z"
   },
   "NovigoTechnology/nvg_base": {
     "frameworks": [
       "vue"
     ],
-    "pushedAt": "2026-10-18T17:52:29Z"
+    "pushedAt": "2026-10-19T21:07:46Z"
   },
   "_version": 2,
   "mintecc/project_z4": {
