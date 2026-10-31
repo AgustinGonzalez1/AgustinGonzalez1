@@ -1,5 +1,5 @@
 {
-  "commits": 4366,
+  "commits": 4373,
   "contact_discord": "agustin.dev",
   "contact_email": "agus.devvv@gmail.com",
   "contact_linkedin": "linkedin.com/in/ricardoagustingonzalez",
@@ -22,8 +22,8 @@
   "languages_real": [
     "Spanish"
   ],
-  "loc_added": 854529,
-  "loc_deleted": 391709,
+  "loc_added": 855006,
+  "loc_deleted": 391862,
   "most_popular": [
     {
       "color": "#f1e05a",
@@ -53,7 +53,7 @@
     {
       "color": "#ffffff",
       "name": "Next.js",
-      "percent": 11.1
+      "percent": 11.0
     }
   ],
   "os_list": "Linux, Windows",
