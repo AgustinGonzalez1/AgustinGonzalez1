@@ -1,7 +1,7 @@
 {
   "AgustinGonzalez1/AgustinGonzalez1": {
     "frameworks": [],
-    "pushedAt": "2026-11-05T04:58:11Z"
+    "pushedAt": "2026-11-06T04:57:33Z"
   },
   "AgustinGonzalez1/AppClima": {
     "frameworks": [],
@@ -194,6 +194,10 @@
   "AgustinGonzalez1/ejemplo": {
     "frameworks": [],
     "pushedAt": "2025-02-21T22:45:33Z"
+  },
+  "AgustinGonzalez1/ejemplo1": {
+    "frameworks": [],
+    "pushedAt": "2026-11-06T23:26:40Z"
   },
   "AgustinGonzalez1/entregafinal-RicardoGonzalez": {
     "frameworks": [],
@@ -398,7 +402,7 @@
   },
   "NovigoTechnology/csf_argentina": {
     "frameworks": [],
-    "pushedAt": "2026-11-03T14:57:34Z"
+    "pushedAt": "2026-11-06T12:11:23Z"
   },
   "NovigoTechnology/hefesto": {
     "frameworks": [],
@@ -414,7 +418,7 @@
     "frameworks": [
       "vue"
     ],
-    "pushedAt": "2026-11-05T18:58:30Z"
+    "pushedAt": "2026-11-07T03:06:48Z"
   },
   "NovigoTechnology/nagus-docs": {
     "frameworks": [],
