@@ -41,7 +41,7 @@
   <text x="218" y="47" class="line fadein" style="animation-delay:0.045s"><tspan fill="#0969da">OS</tspan><tspan fill="#afb8c1"> ........................................ </tspan></text>
   <text x="638" y="47" text-anchor="end" class="line fadein" style="animation-delay:0.045s" fill="#24292f">Linux, Windows</text>
   <text x="218" y="64" class="line fadein" style="animation-delay:0.09s"><tspan fill="#0969da">Uptime</tspan><tspan fill="#afb8c1"> ................................ </tspan></text>
-  <text x="638" y="64" text-anchor="end" class="line fadein" style="animation-delay:0.09s" fill="#24292f">3 years, 10 months</text>
+  <text x="638" y="64" text-anchor="end" class="line fadein" style="animation-delay:0.09s" fill="#24292f">3 years, 11 months</text>
   <text x="218" y="81" class="line fadein" style="animation-delay:0.135s"><tspan fill="#0969da">IDE</tspan><tspan fill="#afb8c1"> ............................................... </tspan></text>
   <text x="638" y="81" text-anchor="end" class="line fadein" style="animation-delay:0.135s" fill="#24292f">VSCode</text>
   <text x="218" y="106" class="line fadein" style="animation-delay:0.18s"><tspan fill="#0969da">Languages.Programming</tspan><tspan fill="#afb8c1"> ..... </tspan></text>
@@ -69,14 +69,14 @@
   <text x="218" y="317" class="section fadein" fill="#cf222e" style="animation-delay:0.675s">GitHub Stats</text>
   <line x1="314.4" y1="313.5" x2="638" y2="313.5" class="hr" />
   <text x="218" y="334" class="line fadein" style="animation-delay:0.72s"><tspan fill="#0969da">Repos</tspan><tspan fill="#afb8c1"> ........... </tspan></text>
-  <text x="463.52" y="334" text-anchor="end" class="line fadein" style="animation-delay:0.72s" fill="#24292f">76 {Contrib: 31}</text>
+  <text x="463.52" y="334" text-anchor="end" class="line fadein" style="animation-delay:0.72s" fill="#24292f">76 {Contrib: 30}</text>
   <text x="487.52" y="334" class="line fadein" style="animation-delay:0.72s"><tspan fill="#0969da">Stars</tspan><tspan fill="#afb8c1"> ............. </tspan></text>
   <text x="638" y="334" text-anchor="end" class="line fadein" style="animation-delay:0.72s" fill="#24292f">3</text>
   <text x="218" y="351" class="line fadein" style="animation-delay:0.765s"><tspan fill="#0969da">Commits</tspan><tspan fill="#afb8c1"> .................... </tspan></text>
-  <text x="463.52" y="351" text-anchor="end" class="line fadein" style="animation-delay:0.765s" fill="#24292f">4,387</text>
+  <text x="463.52" y="351" text-anchor="end" class="line fadein" style="animation-delay:0.765s" fill="#24292f">4,388</text>
   <text x="487.52" y="351" class="line fadein" style="animation-delay:0.765s"><tspan fill="#0969da">Followers</tspan><tspan fill="#afb8c1"> ........ </tspan></text>
   <text x="638" y="351" text-anchor="end" class="line fadein" style="animation-delay:0.765s" fill="#24292f">10</text>
   <text x="218" y="368" class="line fadein" style="animation-delay:0.81s"><tspan fill="#0969da">Lines of Code</tspan><tspan fill="#afb8c1"> ............ </tspan></text>
   <text x="463.52" y="368" text-anchor="end" class="line fadein" style="animation-delay:0.81s" fill="#24292f">464,163</text>
-  <text x="638" y="368" text-anchor="end" class="line fadein" style="animation-delay:0.81s"><tspan fill="#1a7f37">859,413++</tspan><tspan fill="#24292f">  </tspan><tspan fill="#cf222e">395,250--</tspan></text>
+  <text x="638" y="368" text-anchor="end" class="line fadein" style="animation-delay:0.81s"><tspan fill="#1a7f37">859,432++</tspan><tspan fill="#24292f">  </tspan><tspan fill="#cf222e">395,269--</tspan></text>
 </svg>
